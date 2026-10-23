@@ -80,6 +80,12 @@ layout fields are not the current model container or game footprint.
 renderer.py supplies material ramps and surface processing for each model.
 
 Shared geometry and rendering
+New models must include a procedural geometry generator, its function
+entry point and a command to save model.npz. Edit the generator first and
+verify that it reproduces every saved array before delivery. Integrate
+rendering and slicing through the shared modules below. The three legacy
+array-based models retain their existing authoring method.
+
 assets/chinese-landmarks/export_plaza.py: people, furniture and plaza types.
 assets/chinese-landmarks/plaza_material.py: common paving and DOS palette.
 assets/chinese-landmarks/render_core.py: projection, lighting and shadows.
@@ -87,9 +93,9 @@ assets/chinese-landmarks/sprite_pipeline.py: tile slicing and compilation.
 assets/chinese-landmarks/render_assets.py: whole-package build entry point.
 assets/package/: NML object definitions, IDs and language strings.
 
-Project version: 0.1.0. GRFID: OPRL.
+Version source: assets/package/grf.nml. GRFID: OPRL.
 The GRF version field stores an integer. The project encodes versions as
-(major << 16) | (minor << 8) | patch, so 0.1.0 is 0x000100 (256).
+(major << 16) | (minor << 8) | patch.
 This value is compiled into the GRF itself. The minimum compatible value
 remains 14 to preserve compatibility with the same object IDs in v14;
 versions 13 and earlier use incompatible IDs.

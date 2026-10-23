@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import importlib.util
 import json
+import re
 import shutil
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
@@ -77,6 +78,18 @@ CURRENT = (
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def package_metadata():
+    """Read the project's version expression from its canonical NML header."""
+    header = (PACKAGE_SOURCE / 'grf.nml').read_text(encoding='utf-8-sig')
+    major, minor, patch = map(int, re.search(
+        r'^\s*version: \((\d+) << 16\) \| \((\d+) << 8\) \| (\d+);', header, re.M).groups())
+    return dict(project_version=f'{major}.{minor}.{patch}',
+                grfid=re.search(r'^\s*grfid: "([^"]+)";', header, re.M).group(1),
+                grf_version=(major << 16) | (minor << 8) | patch,
+                min_compatible_version=int(re.search(
+                    r'^\s*min_compatible_version: (\d+);', header, re.M).group(1)))
 
 
 def adapter(asset):
@@ -274,7 +287,7 @@ def build(output, verify=False, compile_package=False, *, lighting=DEFAULT_SCENE
         print(run.stdout + run.stderr, flush=True)
     for path, digest in source_hashes.items():
         assert sha(path) == digest, path
-    report = dict(renderer='render_core.py',
+    report = dict(**package_metadata(), renderer='render_core.py',
                   baseline_acceptance=json.loads((REFERENCE / 'acceptance.json').read_text(encoding='utf-8')) if verify else None,
                   lighting_settings=dict(sun=SUN_VECTOR.tolist(), **asdict(lighting)),
                   assets=reports,
