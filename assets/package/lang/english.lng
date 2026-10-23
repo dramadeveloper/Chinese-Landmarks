@@ -1,0 +1,18 @@
+##grflangid 0x01
+STR_GRF_NAME :中国地标
+STR_GRF_DESC :
+STR_CLASS :Chinese Landmarks
+STR_OBJECT :Oriental Pearl Tower
+STR_TIANANMEN :Tiananmen
+STR_TEMPLE_OF_HEAVEN :Temple of Heaven
+STR_PLAZA_PLAIN :Plaza
+STR_PLAZA_WALKERS :Walkers
+STR_PLAZA_MEETING :Gathering
+STR_PLAZA_BENCH :Bench
+STR_PLAZA_TREE :Tree
+STR_WATER_CUBE :Water Cube
+STR_XIAN_BELL_TOWER :Xi'an Bell Tower
+STR_CANTON_TOWER :Canton Tower
+STR_XINGHAI_SQUARE :Xinghai Square
+STR_YELLOW_CRANE_TOWER :Yellow Crane Tower
+STR_GATE_TO_THE_EAST :Gate to the East

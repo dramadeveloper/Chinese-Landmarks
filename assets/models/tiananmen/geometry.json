@@ -1,0 +1,64 @@
+{
+  "size": [
+    240,
+    120,
+    64
+  ],
+  "voxels_per_tile": 40,
+  "pixels_per_voxel": 0.8,
+  "building_artistic_scale": 3,
+  "model_metres_per_voxel_reference": 2,
+  "layout": "6x3; Tiananmen gate, paired reviewing stands, side walls and five Jinshui bridges",
+  "roofs": [
+    {
+      "cx": 120,
+      "cy": 37,
+      "hx": 56,
+      "hy": 22,
+      "base": 35,
+      "rise": 5,
+      "ridge": 43
+    },
+    {
+      "cx": 120,
+      "cy": 37,
+      "hx": 51,
+      "hy": 18,
+      "base": 44,
+      "rise": 9,
+      "ridge": 36
+    }
+  ],
+  "reviewing_stands": [
+    {
+      "bounds": [
+        5,
+        35,
+        1,
+        51,
+        71,
+        20
+      ],
+      "rows": 6,
+      "aisle_x": [
+        26,
+        30
+      ]
+    },
+    {
+      "bounds": [
+        188,
+        35,
+        1,
+        234,
+        71,
+        20
+      ],
+      "rows": 6,
+      "aisle_x": [
+        209,
+        213
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Rendering requires Python 3.12+; nmlc must be available on PATH.
+Pillow>=10.2,<13
+numpy>=2,<3
+nml==0.7.5

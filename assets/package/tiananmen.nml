@@ -1,0 +1,1481 @@
+spriteset(tam_menu_0, "sprites/tiananmen/purchase0.png") {
+    [0, 0, 128, 65, -64, -33]
+}
+spritelayout tam_menu_layout_0 {
+    ground { sprite: 0; }
+    building { sprite: tam_menu_0; zextent: 65; }
+}
+spriteset(tam_g_v0_0_0, "sprites/tiananmen/g_v0_0_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_0_0, "sprites/tiananmen/b_v0_0_0.png") {
+    [0, 0, 45, 18, -20, 1]
+}
+spritelayout tam_layout_v0_0_0 {
+    ground { sprite: tam_g_v0_0_0; }
+    building { sprite: tam_b_v0_0_0; zextent: 19; }
+}
+spriteset(tam_g_v0_1_0, "sprites/tiananmen/g_v0_1_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_1_0, "sprites/tiananmen/b_v0_1_0.png") {
+    [0, 0, 20, 8, 11, -3]
+}
+spritelayout tam_layout_v0_1_0 {
+    ground { sprite: tam_g_v0_1_0; }
+    building { sprite: tam_b_v0_1_0; zextent: 19; }
+}
+spriteset(tam_g_v0_2_0, "sprites/tiananmen/g_v0_2_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_2_0, "sprites/tiananmen/b_v0_2_0.png") {
+    [0, 0, 31, 16, -10, -34]
+}
+spritelayout tam_layout_v0_2_0 {
+    ground { sprite: tam_g_v0_2_0; }
+    building { sprite: tam_b_v0_2_0; zextent: 50; }
+}
+spriteset(tam_g_v0_3_0, "sprites/tiananmen/g_v0_3_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_3_0, "sprites/tiananmen/b_v0_3_0.png") {
+    [0, 0, 40, 17, -10, -35]
+}
+spritelayout tam_layout_v0_3_0 {
+    ground { sprite: tam_g_v0_3_0; }
+    building { sprite: tam_b_v0_3_0; zextent: 50; }
+}
+spriteset(tam_g_v0_4_0, "sprites/tiananmen/g_v0_4_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_4_0, "sprites/tiananmen/b_v0_4_0.png") {
+    [0, 0, 40, 17, -10, -35]
+}
+spritelayout tam_layout_v0_4_0 {
+    ground { sprite: tam_g_v0_4_0; }
+    building { sprite: tam_b_v0_4_0; zextent: 50; }
+}
+spriteset(tam_g_v0_5_0, "sprites/tiananmen/g_v0_5_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_5_0, "sprites/tiananmen/b_v0_5_0.png") {
+    [0, 0, 47, 41, -17, -35]
+}
+spritelayout tam_layout_v0_5_0 {
+    ground { sprite: tam_g_v0_5_0; }
+    building { sprite: tam_b_v0_5_0; zextent: 50; }
+}
+spriteset(tam_g_v0_6_0, "sprites/tiananmen/g_v0_6_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_6_0, "sprites/tiananmen/b_v0_6_0.png") {
+    [0, 0, 49, 35, -18, -21]
+}
+spritelayout tam_layout_v0_6_0 {
+    ground { sprite: tam_g_v0_6_0; }
+    building { sprite: tam_b_v0_6_0; zextent: 29; }
+}
+spriteset(tam_g_v0_7_0, "sprites/tiananmen/g_v0_7_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_7_0, "sprites/tiananmen/b_v0_7_0.png") {
+    [0, 0, 26, 31, 5, -4]
+}
+spritelayout tam_layout_v0_7_0 {
+    ground { sprite: tam_g_v0_7_0; }
+    building { sprite: tam_b_v0_7_0; zextent: 19; }
+}
+spriteset(tam_g_v0_0_1, "sprites/tiananmen/g_v0_0_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_0_1, "sprites/tiananmen/b_v0_0_1.png") {
+    [0, 0, 54, 40, -31, -18]
+}
+spritelayout tam_layout_v0_0_1 {
+    ground { sprite: tam_g_v0_0_1; }
+    building { sprite: tam_b_v0_0_1; zextent: 28; }
+}
+spriteset(tam_g_v0_1_1, "sprites/tiananmen/g_v0_1_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_1_1, "sprites/tiananmen/b_v0_1_1.png") {
+    [0, 0, 50, 46, -18, -18]
+}
+spritelayout tam_layout_v0_1_1 {
+    ground { sprite: tam_g_v0_1_1; }
+    building { sprite: tam_b_v0_1_1; zextent: 28; }
+}
+spriteset(tam_g_v0_2_1, "sprites/tiananmen/g_v0_2_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_2_1, "sprites/tiananmen/b_v0_2_1.png") {
+    [0, 0, 61, 67, -31, -42]
+}
+spritelayout tam_layout_v0_2_1 {
+    ground { sprite: tam_g_v0_2_1; }
+    building { sprite: tam_b_v0_2_1; zextent: 60; }
+}
+spriteset(tam_g_v0_3_1, "sprites/tiananmen/g_v0_3_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_3_1, "sprites/tiananmen/b_v0_3_1.png") {
+    [0, 0, 63, 82, -31, -52]
+}
+spritelayout tam_layout_v0_3_1 {
+    ground { sprite: tam_g_v0_3_1; }
+    building { sprite: tam_b_v0_3_1; zextent: 57; }
+}
+spriteset(tam_g_v0_4_1, "sprites/tiananmen/g_v0_4_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_4_1, "sprites/tiananmen/b_v0_4_1.png") {
+    [0, 0, 61, 78, -29, -52]
+}
+spritelayout tam_layout_v0_4_1 {
+    ground { sprite: tam_g_v0_4_1; }
+    building { sprite: tam_b_v0_4_1; zextent: 57; }
+}
+spriteset(tam_g_v0_5_1, "sprites/tiananmen/g_v0_5_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_5_1, "sprites/tiananmen/b_v0_5_1.png") {
+    [0, 0, 63, 72, -31, -52]
+}
+spritelayout tam_layout_v0_5_1 {
+    ground { sprite: tam_g_v0_5_1; }
+    building { sprite: tam_b_v0_5_1; zextent: 60; }
+}
+spriteset(tam_g_v0_6_1, "sprites/tiananmen/g_v0_6_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_6_1, "sprites/tiananmen/b_v0_6_1.png") {
+    [0, 0, 61, 49, -31, -27]
+}
+spritelayout tam_layout_v0_6_1 {
+    ground { sprite: tam_g_v0_6_1; }
+    building { sprite: tam_b_v0_6_1; zextent: 36; }
+}
+spriteset(tam_g_v0_7_1, "sprites/tiananmen/g_v0_7_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_7_1, "sprites/tiananmen/b_v0_7_1.png") {
+    [0, 0, 57, 46, -25, -19]
+}
+spritelayout tam_layout_v0_7_1 {
+    ground { sprite: tam_g_v0_7_1; }
+    building { sprite: tam_b_v0_7_1; zextent: 28; }
+}
+spriteset(tam_g_v0_0_2, "sprites/tiananmen/g_v0_0_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_0_2, "sprites/tiananmen/b_v0_0_2.png") {
+    [0, 0, 57, 35, -32, -7]
+}
+spritelayout tam_layout_v0_0_2 {
+    ground { sprite: tam_g_v0_0_2; }
+    building { sprite: tam_b_v0_0_2; zextent: 12; }
+}
+spriteset(tam_g_v0_1_2, "sprites/tiananmen/g_v0_1_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_1_2, "sprites/tiananmen/b_v0_1_2.png") {
+    [0, 0, 56, 40, -31, -13]
+}
+spritelayout tam_layout_v0_1_2 {
+    ground { sprite: tam_g_v0_1_2; }
+    building { sprite: tam_b_v0_1_2; zextent: 29; }
+}
+spriteset(tam_g_v0_2_2, "sprites/tiananmen/g_v0_2_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_2_2, "sprites/tiananmen/b_v0_2_2.png") {
+    [0, 0, 54, 52, -31, -27]
+}
+spritelayout tam_layout_v0_2_2 {
+    ground { sprite: tam_g_v0_2_2; }
+    building { sprite: tam_b_v0_2_2; zextent: 29; }
+}
+spriteset(tam_g_v0_3_2, "sprites/tiananmen/g_v0_3_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_3_2, "sprites/tiananmen/b_v0_3_2.png") {
+    [0, 0, 58, 54, -31, -27]
+}
+spritelayout tam_layout_v0_3_2 {
+    ground { sprite: tam_g_v0_3_2; }
+    building { sprite: tam_b_v0_3_2; zextent: 29; }
+}
+spriteset(tam_g_v0_4_2, "sprites/tiananmen/g_v0_4_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_4_2, "sprites/tiananmen/b_v0_4_2.png") {
+    [0, 0, 63, 53, -31, -27]
+}
+spritelayout tam_layout_v0_4_2 {
+    ground { sprite: tam_g_v0_4_2; }
+    building { sprite: tam_b_v0_4_2; zextent: 29; }
+}
+spriteset(tam_g_v0_5_2, "sprites/tiananmen/g_v0_5_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_5_2, "sprites/tiananmen/b_v0_5_2.png") {
+    [0, 0, 53, 54, -31, -27]
+}
+spritelayout tam_layout_v0_5_2 {
+    ground { sprite: tam_g_v0_5_2; }
+    building { sprite: tam_b_v0_5_2; zextent: 29; }
+}
+spriteset(tam_g_v0_6_2, "sprites/tiananmen/g_v0_6_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_6_2, "sprites/tiananmen/b_v0_6_2.png") {
+    [0, 0, 55, 56, -32, -28]
+}
+spritelayout tam_layout_v0_6_2 {
+    ground { sprite: tam_g_v0_6_2; }
+    building { sprite: tam_b_v0_6_2; zextent: 29; }
+}
+spriteset(tam_g_v0_7_2, "sprites/tiananmen/g_v0_7_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_7_2, "sprites/tiananmen/b_v0_7_2.png") {
+    [0, 0, 50, 37, -25, -9]
+}
+spritelayout tam_layout_v0_7_2 {
+    ground { sprite: tam_g_v0_7_2; }
+    building { sprite: tam_b_v0_7_2; zextent: 12; }
+}
+spriteset(tam_g_v0_0_3, "sprites/tiananmen/g_v0_0_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_0_3, "sprites/tiananmen/b_v0_0_3.png") {
+    [0, 0, 33, 23, -23, 5]
+}
+spritelayout tam_layout_v0_0_3 {
+    ground { sprite: tam_g_v0_0_3; }
+    building { sprite: tam_b_v0_0_3; zextent: 4; }
+}
+spriteset(tam_g_v0_1_3, "sprites/tiananmen/g_v0_1_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_1_3, "sprites/tiananmen/b_v0_1_3.png") {
+    [0, 0, 51, 17, -26, 2]
+}
+spritelayout tam_layout_v0_1_3 {
+    ground { sprite: tam_g_v0_1_3; }
+    building { sprite: tam_b_v0_1_3; zextent: 5; }
+}
+spriteset(tam_g_v0_2_3, "sprites/tiananmen/g_v0_2_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_2_3, "sprites/tiananmen/b_v0_2_3.png") {
+    [0, 0, 34, 20, -27, -2]
+}
+spritelayout tam_layout_v0_2_3 {
+    ground { sprite: tam_g_v0_2_3; }
+    building { sprite: tam_b_v0_2_3; zextent: 11; }
+}
+spriteset(tam_g_v0_3_3, "sprites/tiananmen/g_v0_3_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_3_3, "sprites/tiananmen/b_v0_3_3.png") {
+    [0, 0, 38, 24, -32, -5]
+}
+spritelayout tam_layout_v0_3_3 {
+    ground { sprite: tam_g_v0_3_3; }
+    building { sprite: tam_b_v0_3_3; zextent: 10; }
+}
+spriteset(tam_g_v0_4_3, "sprites/tiananmen/g_v0_4_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_4_3, "sprites/tiananmen/b_v0_4_3.png") {
+    [0, 0, 39, 23, -28, -5]
+}
+spritelayout tam_layout_v0_4_3 {
+    ground { sprite: tam_g_v0_4_3; }
+    building { sprite: tam_b_v0_4_3; zextent: 10; }
+}
+spriteset(tam_g_v0_5_3, "sprites/tiananmen/g_v0_5_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_5_3, "sprites/tiananmen/b_v0_5_3.png") {
+    [0, 0, 32, 24, -26, -5]
+}
+spritelayout tam_layout_v0_5_3 {
+    ground { sprite: tam_g_v0_5_3; }
+    building { sprite: tam_b_v0_5_3; zextent: 11; }
+}
+spriteset(tam_g_v0_6_3, "sprites/tiananmen/g_v0_6_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_6_3, "sprites/tiananmen/b_v0_6_3.png") {
+    [0, 0, 35, 28, -23, 0]
+}
+spritelayout tam_layout_v0_6_3 {
+    ground { sprite: tam_g_v0_6_3; }
+    building { sprite: tam_b_v0_6_3; zextent: 5; }
+}
+spriteset(tam_g_v0_7_3, "sprites/tiananmen/g_v0_7_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v0_7_3, "sprites/tiananmen/b_v0_7_3.png") {
+    [0, 0, 42, 18, -17, 2]
+}
+spritelayout tam_layout_v0_7_3 {
+    ground { sprite: tam_g_v0_7_3; }
+    building { sprite: tam_b_v0_7_3; zextent: 4; }
+}
+switch (FEAT_OBJECTS, SELF, tam_tiles_0, relative_pos) {
+    relative_coord(0,0): tam_layout_v0_0_0;
+    relative_coord(1,0): tam_layout_v0_1_0;
+    relative_coord(2,0): tam_layout_v0_2_0;
+    relative_coord(3,0): tam_layout_v0_3_0;
+    relative_coord(4,0): tam_layout_v0_4_0;
+    relative_coord(5,0): tam_layout_v0_5_0;
+    relative_coord(6,0): tam_layout_v0_6_0;
+    relative_coord(7,0): tam_layout_v0_7_0;
+    relative_coord(0,1): tam_layout_v0_0_1;
+    relative_coord(1,1): tam_layout_v0_1_1;
+    relative_coord(2,1): tam_layout_v0_2_1;
+    relative_coord(3,1): tam_layout_v0_3_1;
+    relative_coord(4,1): tam_layout_v0_4_1;
+    relative_coord(5,1): tam_layout_v0_5_1;
+    relative_coord(6,1): tam_layout_v0_6_1;
+    relative_coord(7,1): tam_layout_v0_7_1;
+    relative_coord(0,2): tam_layout_v0_0_2;
+    relative_coord(1,2): tam_layout_v0_1_2;
+    relative_coord(2,2): tam_layout_v0_2_2;
+    relative_coord(3,2): tam_layout_v0_3_2;
+    relative_coord(4,2): tam_layout_v0_4_2;
+    relative_coord(5,2): tam_layout_v0_5_2;
+    relative_coord(6,2): tam_layout_v0_6_2;
+    relative_coord(7,2): tam_layout_v0_7_2;
+    relative_coord(0,3): tam_layout_v0_0_3;
+    relative_coord(1,3): tam_layout_v0_1_3;
+    relative_coord(2,3): tam_layout_v0_2_3;
+    relative_coord(3,3): tam_layout_v0_3_3;
+    relative_coord(4,3): tam_layout_v0_4_3;
+    relative_coord(5,3): tam_layout_v0_5_3;
+    relative_coord(6,3): tam_layout_v0_6_3;
+    relative_coord(7,3): tam_layout_v0_7_3;
+    tam_layout_v0_0_0;
+}
+spriteset(tam_menu_1, "sprites/tiananmen/purchase1.png") {
+    [0, 0, 128, 64, -64, -32]
+}
+spritelayout tam_menu_layout_1 {
+    ground { sprite: 0; }
+    building { sprite: tam_menu_1; zextent: 64; }
+}
+spriteset(tam_g_v1_0_0, "sprites/tiananmen/g_v1_0_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_0_0, "sprites/tiananmen/b_v1_0_0.png") {
+    [0, 0, 42, 17, -17, 8]
+}
+spritelayout tam_layout_v1_0_0 {
+    ground { sprite: tam_g_v1_0_0; }
+    building { sprite: tam_b_v1_0_0; zextent: 4; }
+}
+spriteset(tam_g_v1_1_0, "sprites/tiananmen/g_v1_1_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_1_0, "sprites/tiananmen/b_v1_1_0.png") {
+    [0, 0, 48, 21, -23, 1]
+}
+spritelayout tam_layout_v1_1_0 {
+    ground { sprite: tam_g_v1_1_0; }
+    building { sprite: tam_b_v1_1_0; zextent: 12; }
+}
+spriteset(tam_g_v1_2_0, "sprites/tiananmen/g_v1_2_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_2_0, "sprites/tiananmen/b_v1_2_0.png") {
+    [0, 0, 56, 22, -25, -8]
+}
+spritelayout tam_layout_v1_2_0 {
+    ground { sprite: tam_g_v1_2_0; }
+    building { sprite: tam_b_v1_2_0; zextent: 28; }
+}
+spriteset(tam_g_v1_3_0, "sprites/tiananmen/g_v1_3_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_3_0, "sprites/tiananmen/b_v1_3_0.png") {
+    [0, 0, 26, 38, 5, -14]
+}
+spritelayout tam_layout_v1_3_0 {
+    ground { sprite: tam_g_v1_3_0; }
+    building { sprite: tam_b_v1_3_0; zextent: 19; }
+}
+spriteset(tam_g_v1_0_1, "sprites/tiananmen/g_v1_0_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_0_1, "sprites/tiananmen/b_v1_0_1.png") {
+    [0, 0, 29, 23, -23, 2]
+}
+spritelayout tam_layout_v1_0_1 {
+    ground { sprite: tam_g_v1_0_1; }
+    building { sprite: tam_b_v1_0_1; zextent: 5; }
+}
+spriteset(tam_g_v1_1_1, "sprites/tiananmen/g_v1_1_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_1_1, "sprites/tiananmen/b_v1_1_1.png") {
+    [0, 0, 18, 6, -31, 3]
+}
+spritelayout tam_layout_v1_1_1 {
+    ground { sprite: tam_g_v1_1_1; }
+    building { sprite: tam_b_v1_1_1; zextent: 10; }
+}
+spriteset(tam_g_v1_2_1, "sprites/tiananmen/g_v1_2_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_2_1, "sprites/tiananmen/b_v1_2_1.png") {
+    [0, 0, 38, 19, -31, -10]
+}
+spritelayout tam_layout_v1_2_1 {
+    ground { sprite: tam_g_v1_2_1; }
+    building { sprite: tam_b_v1_2_1; zextent: 28; }
+}
+spriteset(tam_g_v1_3_1, "sprites/tiananmen/g_v1_3_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_3_1, "sprites/tiananmen/b_v1_3_1.png") {
+    [0, 0, 46, 25, -20, -18]
+}
+spritelayout tam_layout_v1_3_1 {
+    ground { sprite: tam_g_v1_3_1; }
+    building { sprite: tam_b_v1_3_1; zextent: 29; }
+}
+spriteset(tam_g_v1_0_2, "sprites/tiananmen/g_v1_0_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_0_2, "sprites/tiananmen/b_v1_0_2.png") {
+    [0, 0, 15, 10, -15, 12]
+}
+spritelayout tam_layout_v1_0_2 {
+    ground { sprite: tam_g_v1_0_2; }
+    building { sprite: tam_b_v1_0_2; zextent: 11; }
+}
+spriteset(tam_g_v1_1_2, "sprites/tiananmen/g_v1_1_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_1_2, "sprites/tiananmen/b_v1_1_2.png") {
+    [0, 0, 1, 1, 0, 0]
+}
+spritelayout tam_layout_v1_1_2 {
+    ground { sprite: tam_g_v1_1_2; }
+    building { sprite: tam_b_v1_1_2; zextent: 1; }
+}
+spriteset(tam_g_v1_2_2, "sprites/tiananmen/g_v1_2_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_2_2, "sprites/tiananmen/b_v1_2_2.png") {
+    [0, 0, 48, 25, -21, -43]
+}
+spritelayout tam_layout_v1_2_2 {
+    ground { sprite: tam_g_v1_2_2; }
+    building { sprite: tam_b_v1_2_2; zextent: 60; }
+}
+spriteset(tam_g_v1_3_2, "sprites/tiananmen/g_v1_3_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_3_2, "sprites/tiananmen/b_v1_3_2.png") {
+    [0, 0, 61, 65, -29, -40]
+}
+spritelayout tam_layout_v1_3_2 {
+    ground { sprite: tam_g_v1_3_2; }
+    building { sprite: tam_b_v1_3_2; zextent: 50; }
+}
+spriteset(tam_g_v1_0_3, "sprites/tiananmen/g_v1_0_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_0_3, "sprites/tiananmen/b_v1_0_3.png") {
+    [0, 0, 32, 16, -25, 7]
+}
+spritelayout tam_layout_v1_0_3 {
+    ground { sprite: tam_g_v1_0_3; }
+    building { sprite: tam_b_v1_0_3; zextent: 10; }
+}
+spriteset(tam_g_v1_1_3, "sprites/tiananmen/g_v1_1_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_1_3, "sprites/tiananmen/b_v1_1_3.png") {
+    [0, 0, 1, 1, 0, 0]
+}
+spritelayout tam_layout_v1_1_3 {
+    ground { sprite: tam_g_v1_1_3; }
+    building { sprite: tam_b_v1_1_3; zextent: 1; }
+}
+spriteset(tam_g_v1_2_3, "sprites/tiananmen/g_v1_2_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_2_3, "sprites/tiananmen/b_v1_2_3.png") {
+    [0, 0, 59, 27, -32, -45]
+}
+spritelayout tam_layout_v1_2_3 {
+    ground { sprite: tam_g_v1_2_3; }
+    building { sprite: tam_b_v1_2_3; zextent: 57; }
+}
+spriteset(tam_g_v1_3_3, "sprites/tiananmen/g_v1_3_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_3_3, "sprites/tiananmen/b_v1_3_3.png") {
+    [0, 0, 52, 72, -20, -49]
+}
+spritelayout tam_layout_v1_3_3 {
+    ground { sprite: tam_g_v1_3_3; }
+    building { sprite: tam_b_v1_3_3; zextent: 50; }
+}
+spriteset(tam_g_v1_0_4, "sprites/tiananmen/g_v1_0_4.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_0_4, "sprites/tiananmen/b_v1_0_4.png") {
+    [0, 0, 30, 23, -25, 6]
+}
+spritelayout tam_layout_v1_0_4 {
+    ground { sprite: tam_g_v1_0_4; }
+    building { sprite: tam_b_v1_0_4; zextent: 10; }
+}
+spriteset(tam_g_v1_1_4, "sprites/tiananmen/g_v1_1_4.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_1_4, "sprites/tiananmen/b_v1_1_4.png") {
+    [0, 0, 12, 11, 16, -1]
+}
+spritelayout tam_layout_v1_1_4 {
+    ground { sprite: tam_g_v1_1_4; }
+    building { sprite: tam_b_v1_1_4; zextent: 11; }
+}
+spriteset(tam_g_v1_2_4, "sprites/tiananmen/g_v1_2_4.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_2_4, "sprites/tiananmen/b_v1_2_4.png") {
+    [0, 0, 59, 27, -32, -45]
+}
+spritelayout tam_layout_v1_2_4 {
+    ground { sprite: tam_g_v1_2_4; }
+    building { sprite: tam_b_v1_2_4; zextent: 57; }
+}
+spriteset(tam_g_v1_3_4, "sprites/tiananmen/g_v1_3_4.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_3_4, "sprites/tiananmen/b_v1_3_4.png") {
+    [0, 0, 51, 74, -19, -49]
+}
+spritelayout tam_layout_v1_3_4 {
+    ground { sprite: tam_g_v1_3_4; }
+    building { sprite: tam_b_v1_3_4; zextent: 50; }
+}
+spriteset(tam_g_v1_0_5, "sprites/tiananmen/g_v1_0_5.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_0_5, "sprites/tiananmen/b_v1_0_5.png") {
+    [0, 0, 34, 19, -28, 9]
+}
+spritelayout tam_layout_v1_0_5 {
+    ground { sprite: tam_g_v1_0_5; }
+    building { sprite: tam_b_v1_0_5; zextent: 11; }
+}
+spriteset(tam_g_v1_1_5, "sprites/tiananmen/g_v1_1_5.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_1_5, "sprites/tiananmen/b_v1_1_5.png") {
+    [0, 0, 37, 29, -14, -5]
+}
+spritelayout tam_layout_v1_1_5 {
+    ground { sprite: tam_g_v1_1_5; }
+    building { sprite: tam_b_v1_1_5; zextent: 27; }
+}
+spriteset(tam_g_v1_2_5, "sprites/tiananmen/g_v1_2_5.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_2_5, "sprites/tiananmen/b_v1_2_5.png") {
+    [0, 0, 63, 51, -32, -45]
+}
+spritelayout tam_layout_v1_2_5 {
+    ground { sprite: tam_g_v1_2_5; }
+    building { sprite: tam_b_v1_2_5; zextent: 60; }
+}
+spriteset(tam_g_v1_3_5, "sprites/tiananmen/g_v1_3_5.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_3_5, "sprites/tiananmen/b_v1_3_5.png") {
+    [0, 0, 51, 79, -20, -49]
+}
+spritelayout tam_layout_v1_3_5 {
+    ground { sprite: tam_g_v1_3_5; }
+    building { sprite: tam_b_v1_3_5; zextent: 50; }
+}
+spriteset(tam_g_v1_0_6, "sprites/tiananmen/g_v1_0_6.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_0_6, "sprites/tiananmen/b_v1_0_6.png") {
+    [0, 0, 51, 22, -26, 5]
+}
+spritelayout tam_layout_v1_0_6 {
+    ground { sprite: tam_g_v1_0_6; }
+    building { sprite: tam_b_v1_0_6; zextent: 5; }
+}
+spriteset(tam_g_v1_1_6, "sprites/tiananmen/g_v1_1_6.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_1_6, "sprites/tiananmen/b_v1_1_6.png") {
+    [0, 0, 56, 35, -31, -13]
+}
+spritelayout tam_layout_v1_1_6 {
+    ground { sprite: tam_g_v1_1_6; }
+    building { sprite: tam_b_v1_1_6; zextent: 29; }
+}
+spriteset(tam_g_v1_2_6, "sprites/tiananmen/g_v1_2_6.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_2_6, "sprites/tiananmen/b_v1_2_6.png") {
+    [0, 0, 62, 48, -31, -34]
+}
+spritelayout tam_layout_v1_2_6 {
+    ground { sprite: tam_g_v1_2_6; }
+    building { sprite: tam_b_v1_2_6; zextent: 36; }
+}
+spriteset(tam_g_v1_3_6, "sprites/tiananmen/g_v1_3_6.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_3_6, "sprites/tiananmen/b_v1_3_6.png") {
+    [0, 0, 60, 45, -29, -27]
+}
+spritelayout tam_layout_v1_3_6 {
+    ground { sprite: tam_g_v1_3_6; }
+    building { sprite: tam_b_v1_3_6; zextent: 29; }
+}
+spriteset(tam_g_v1_0_7, "sprites/tiananmen/g_v1_0_7.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_0_7, "sprites/tiananmen/b_v1_0_7.png") {
+    [0, 0, 33, 21, -23, 2]
+}
+spritelayout tam_layout_v1_0_7 {
+    ground { sprite: tam_g_v1_0_7; }
+    building { sprite: tam_b_v1_0_7; zextent: 4; }
+}
+spriteset(tam_g_v1_1_7, "sprites/tiananmen/g_v1_1_7.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_1_7, "sprites/tiananmen/b_v1_1_7.png") {
+    [0, 0, 56, 26, -31, 1]
+}
+spritelayout tam_layout_v1_1_7 {
+    ground { sprite: tam_g_v1_1_7; }
+    building { sprite: tam_b_v1_1_7; zextent: 12; }
+}
+spriteset(tam_g_v1_2_7, "sprites/tiananmen/g_v1_2_7.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_2_7, "sprites/tiananmen/b_v1_2_7.png") {
+    [0, 0, 56, 37, -31, -10]
+}
+spritelayout tam_layout_v1_2_7 {
+    ground { sprite: tam_g_v1_2_7; }
+    building { sprite: tam_b_v1_2_7; zextent: 28; }
+}
+spriteset(tam_g_v1_3_7, "sprites/tiananmen/g_v1_3_7.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v1_3_7, "sprites/tiananmen/b_v1_3_7.png") {
+    [0, 0, 45, 31, -20, -18]
+}
+spritelayout tam_layout_v1_3_7 {
+    ground { sprite: tam_g_v1_3_7; }
+    building { sprite: tam_b_v1_3_7; zextent: 19; }
+}
+switch (FEAT_OBJECTS, SELF, tam_tiles_1, relative_pos) {
+    relative_coord(0,0): tam_layout_v1_0_0;
+    relative_coord(1,0): tam_layout_v1_1_0;
+    relative_coord(2,0): tam_layout_v1_2_0;
+    relative_coord(3,0): tam_layout_v1_3_0;
+    relative_coord(0,1): tam_layout_v1_0_1;
+    relative_coord(1,1): tam_layout_v1_1_1;
+    relative_coord(2,1): tam_layout_v1_2_1;
+    relative_coord(3,1): tam_layout_v1_3_1;
+    relative_coord(0,2): tam_layout_v1_0_2;
+    relative_coord(1,2): tam_layout_v1_1_2;
+    relative_coord(2,2): tam_layout_v1_2_2;
+    relative_coord(3,2): tam_layout_v1_3_2;
+    relative_coord(0,3): tam_layout_v1_0_3;
+    relative_coord(1,3): tam_layout_v1_1_3;
+    relative_coord(2,3): tam_layout_v1_2_3;
+    relative_coord(3,3): tam_layout_v1_3_3;
+    relative_coord(0,4): tam_layout_v1_0_4;
+    relative_coord(1,4): tam_layout_v1_1_4;
+    relative_coord(2,4): tam_layout_v1_2_4;
+    relative_coord(3,4): tam_layout_v1_3_4;
+    relative_coord(0,5): tam_layout_v1_0_5;
+    relative_coord(1,5): tam_layout_v1_1_5;
+    relative_coord(2,5): tam_layout_v1_2_5;
+    relative_coord(3,5): tam_layout_v1_3_5;
+    relative_coord(0,6): tam_layout_v1_0_6;
+    relative_coord(1,6): tam_layout_v1_1_6;
+    relative_coord(2,6): tam_layout_v1_2_6;
+    relative_coord(3,6): tam_layout_v1_3_6;
+    relative_coord(0,7): tam_layout_v1_0_7;
+    relative_coord(1,7): tam_layout_v1_1_7;
+    relative_coord(2,7): tam_layout_v1_2_7;
+    relative_coord(3,7): tam_layout_v1_3_7;
+    tam_layout_v1_0_0;
+}
+spriteset(tam_menu_2, "sprites/tiananmen/purchase2.png") {
+    [0, 0, 128, 64, -64, -32]
+}
+spritelayout tam_menu_layout_2 {
+    ground { sprite: 0; }
+    building { sprite: tam_menu_2; zextent: 64; }
+}
+spriteset(tam_g_v2_0_0, "sprites/tiananmen/g_v2_0_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_0_0, "sprites/tiananmen/b_v2_0_0.png") {
+    [0, 0, 42, 18, -25, 8]
+}
+spritelayout tam_layout_v2_0_0 {
+    ground { sprite: tam_g_v2_0_0; }
+    building { sprite: tam_b_v2_0_0; zextent: 4; }
+}
+spriteset(tam_g_v2_1_0, "sprites/tiananmen/g_v2_1_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_1_0, "sprites/tiananmen/b_v2_1_0.png") {
+    [0, 0, 35, 23, -12, 2]
+}
+spritelayout tam_layout_v2_1_0 {
+    ground { sprite: tam_g_v2_1_0; }
+    building { sprite: tam_b_v2_1_0; zextent: 5; }
+}
+spriteset(tam_g_v2_2_0, "sprites/tiananmen/g_v2_2_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_2_0, "sprites/tiananmen/b_v2_2_0.png") {
+    [0, 0, 16, 9, 1, 12]
+}
+spritelayout tam_layout_v2_2_0 {
+    ground { sprite: tam_g_v2_2_0; }
+    building { sprite: tam_b_v2_2_0; zextent: 11; }
+}
+spriteset(tam_g_v2_3_0, "sprites/tiananmen/g_v2_3_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_3_0, "sprites/tiananmen/b_v2_3_0.png") {
+    [0, 0, 36, 16, -11, 7]
+}
+spritelayout tam_layout_v2_3_0 {
+    ground { sprite: tam_g_v2_3_0; }
+    building { sprite: tam_b_v2_3_0; zextent: 10; }
+}
+spriteset(tam_g_v2_4_0, "sprites/tiananmen/g_v2_4_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_4_0, "sprites/tiananmen/b_v2_4_0.png") {
+    [0, 0, 30, 22, -5, 7]
+}
+spritelayout tam_layout_v2_4_0 {
+    ground { sprite: tam_g_v2_4_0; }
+    building { sprite: tam_b_v2_4_0; zextent: 10; }
+}
+spriteset(tam_g_v2_5_0, "sprites/tiananmen/g_v2_5_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_5_0, "sprites/tiananmen/b_v2_5_0.png") {
+    [0, 0, 34, 20, -6, 8]
+}
+spritelayout tam_layout_v2_5_0 {
+    ground { sprite: tam_g_v2_5_0; }
+    building { sprite: tam_b_v2_5_0; zextent: 11; }
+}
+spriteset(tam_g_v2_6_0, "sprites/tiananmen/g_v2_6_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_6_0, "sprites/tiananmen/b_v2_6_0.png") {
+    [0, 0, 51, 17, -25, 10]
+}
+spritelayout tam_layout_v2_6_0 {
+    ground { sprite: tam_g_v2_6_0; }
+    building { sprite: tam_b_v2_6_0; zextent: 5; }
+}
+spriteset(tam_g_v2_7_0, "sprites/tiananmen/g_v2_7_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_7_0, "sprites/tiananmen/b_v2_7_0.png") {
+    [0, 0, 33, 21, -10, 2]
+}
+spritelayout tam_layout_v2_7_0 {
+    ground { sprite: tam_g_v2_7_0; }
+    building { sprite: tam_b_v2_7_0; zextent: 4; }
+}
+spriteset(tam_g_v2_0_1, "sprites/tiananmen/g_v2_0_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_0_1, "sprites/tiananmen/b_v2_0_1.png") {
+    [0, 0, 46, 21, -23, 1]
+}
+spritelayout tam_layout_v2_0_1 {
+    ground { sprite: tam_g_v2_0_1; }
+    building { sprite: tam_b_v2_0_1; zextent: 12; }
+}
+spriteset(tam_g_v2_1_1, "sprites/tiananmen/g_v2_1_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_1_1, "sprites/tiananmen/b_v2_1_1.png") {
+    [0, 0, 14, 6, 17, 3]
+}
+spritelayout tam_layout_v2_1_1 {
+    ground { sprite: tam_g_v2_1_1; }
+    building { sprite: tam_b_v2_1_1; zextent: 10; }
+}
+spriteset(tam_g_v2_2_1, "sprites/tiananmen/g_v2_2_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_2_1, "sprites/tiananmen/b_v2_2_1.png") {
+    [0, 0, 1, 1, 0, 0]
+}
+spritelayout tam_layout_v2_2_1 {
+    ground { sprite: tam_g_v2_2_1; }
+    building { sprite: tam_b_v2_2_1; zextent: 1; }
+}
+spriteset(tam_g_v2_3_1, "sprites/tiananmen/g_v2_3_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_3_1, "sprites/tiananmen/b_v2_3_1.png") {
+    [0, 0, 1, 1, 0, 0]
+}
+spritelayout tam_layout_v2_3_1 {
+    ground { sprite: tam_g_v2_3_1; }
+    building { sprite: tam_b_v2_3_1; zextent: 1; }
+}
+spriteset(tam_g_v2_4_1, "sprites/tiananmen/g_v2_4_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_4_1, "sprites/tiananmen/b_v2_4_1.png") {
+    [0, 0, 13, 11, -27, -1]
+}
+spritelayout tam_layout_v2_4_1 {
+    ground { sprite: tam_g_v2_4_1; }
+    building { sprite: tam_b_v2_4_1; zextent: 11; }
+}
+spriteset(tam_g_v2_5_1, "sprites/tiananmen/g_v2_5_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_5_1, "sprites/tiananmen/b_v2_5_1.png") {
+    [0, 0, 38, 29, -23, -5]
+}
+spritelayout tam_layout_v2_5_1 {
+    ground { sprite: tam_g_v2_5_1; }
+    building { sprite: tam_b_v2_5_1; zextent: 29; }
+}
+spriteset(tam_g_v2_6_1, "sprites/tiananmen/g_v2_6_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_6_1, "sprites/tiananmen/b_v2_6_1.png") {
+    [0, 0, 57, 35, -25, -13]
+}
+spritelayout tam_layout_v2_6_1 {
+    ground { sprite: tam_g_v2_6_1; }
+    building { sprite: tam_b_v2_6_1; zextent: 29; }
+}
+spriteset(tam_g_v2_7_1, "sprites/tiananmen/g_v2_7_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_7_1, "sprites/tiananmen/b_v2_7_1.png") {
+    [0, 0, 56, 26, -25, 1]
+}
+spritelayout tam_layout_v2_7_1 {
+    ground { sprite: tam_g_v2_7_1; }
+    building { sprite: tam_b_v2_7_1; zextent: 12; }
+}
+spriteset(tam_g_v2_0_2, "sprites/tiananmen/g_v2_0_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_0_2, "sprites/tiananmen/b_v2_0_2.png") {
+    [0, 0, 56, 24, -31, -10]
+}
+spritelayout tam_layout_v2_0_2 {
+    ground { sprite: tam_g_v2_0_2; }
+    building { sprite: tam_b_v2_0_2; zextent: 28; }
+}
+spriteset(tam_g_v2_1_2, "sprites/tiananmen/g_v2_1_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_1_2, "sprites/tiananmen/b_v2_1_2.png") {
+    [0, 0, 59, 30, -28, -21]
+}
+spritelayout tam_layout_v2_1_2 {
+    ground { sprite: tam_g_v2_1_2; }
+    building { sprite: tam_b_v2_1_2; zextent: 36; }
+}
+spriteset(tam_g_v2_2_2, "sprites/tiananmen/g_v2_2_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_2_2, "sprites/tiananmen/b_v2_2_2.png") {
+    [0, 0, 49, 25, -27, -43]
+}
+spritelayout tam_layout_v2_2_2 {
+    ground { sprite: tam_g_v2_2_2; }
+    building { sprite: tam_b_v2_2_2; zextent: 60; }
+}
+spriteset(tam_g_v2_3_2, "sprites/tiananmen/g_v2_3_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_3_2, "sprites/tiananmen/b_v2_3_2.png") {
+    [0, 0, 59, 27, -27, -45]
+}
+spritelayout tam_layout_v2_3_2 {
+    ground { sprite: tam_g_v2_3_2; }
+    building { sprite: tam_b_v2_3_2; zextent: 57; }
+}
+spriteset(tam_g_v2_4_2, "sprites/tiananmen/g_v2_4_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_4_2, "sprites/tiananmen/b_v2_4_2.png") {
+    [0, 0, 59, 27, -27, -45]
+}
+spritelayout tam_layout_v2_4_2 {
+    ground { sprite: tam_g_v2_4_2; }
+    building { sprite: tam_b_v2_4_2; zextent: 57; }
+}
+spriteset(tam_g_v2_5_2, "sprites/tiananmen/g_v2_5_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_5_2, "sprites/tiananmen/b_v2_5_2.png") {
+    [0, 0, 62, 51, -30, -45]
+}
+spritelayout tam_layout_v2_5_2 {
+    ground { sprite: tam_g_v2_5_2; }
+    building { sprite: tam_b_v2_5_2; zextent: 60; }
+}
+spriteset(tam_g_v2_6_2, "sprites/tiananmen/g_v2_6_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_6_2, "sprites/tiananmen/b_v2_6_2.png") {
+    [0, 0, 63, 41, -31, -27]
+}
+spritelayout tam_layout_v2_6_2 {
+    ground { sprite: tam_g_v2_6_2; }
+    building { sprite: tam_b_v2_6_2; zextent: 29; }
+}
+spriteset(tam_g_v2_7_2, "sprites/tiananmen/g_v2_7_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_7_2, "sprites/tiananmen/b_v2_7_2.png") {
+    [0, 0, 56, 41, -25, -14]
+}
+spritelayout tam_layout_v2_7_2 {
+    ground { sprite: tam_g_v2_7_2; }
+    building { sprite: tam_b_v2_7_2; zextent: 28; }
+}
+spriteset(tam_g_v2_0_3, "sprites/tiananmen/g_v2_0_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_0_3, "sprites/tiananmen/b_v2_0_3.png") {
+    [0, 0, 26, 37, -31, -14]
+}
+spritelayout tam_layout_v2_0_3 {
+    ground { sprite: tam_g_v2_0_3; }
+    building { sprite: tam_b_v2_0_3; zextent: 19; }
+}
+spriteset(tam_g_v2_1_3, "sprites/tiananmen/g_v2_1_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_1_3, "sprites/tiananmen/b_v2_1_3.png") {
+    [0, 0, 45, 48, -26, -18]
+}
+spritelayout tam_layout_v2_1_3 {
+    ground { sprite: tam_g_v2_1_3; }
+    building { sprite: tam_b_v2_1_3; zextent: 29; }
+}
+spriteset(tam_g_v2_2_3, "sprites/tiananmen/g_v2_2_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_2_3, "sprites/tiananmen/b_v2_2_3.png") {
+    [0, 0, 61, 66, -32, -41]
+}
+spritelayout tam_layout_v2_2_3 {
+    ground { sprite: tam_g_v2_2_3; }
+    building { sprite: tam_b_v2_2_3; zextent: 50; }
+}
+spriteset(tam_g_v2_3_3, "sprites/tiananmen/g_v2_3_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_3_3, "sprites/tiananmen/b_v2_3_3.png") {
+    [0, 0, 52, 72, -32, -49]
+}
+spritelayout tam_layout_v2_3_3 {
+    ground { sprite: tam_g_v2_3_3; }
+    building { sprite: tam_b_v2_3_3; zextent: 50; }
+}
+spriteset(tam_g_v2_4_3, "sprites/tiananmen/g_v2_4_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_4_3, "sprites/tiananmen/b_v2_4_3.png") {
+    [0, 0, 51, 74, -32, -49]
+}
+spritelayout tam_layout_v2_4_3 {
+    ground { sprite: tam_g_v2_4_3; }
+    building { sprite: tam_b_v2_4_3; zextent: 50; }
+}
+spriteset(tam_g_v2_5_3, "sprites/tiananmen/g_v2_5_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_5_3, "sprites/tiananmen/b_v2_5_3.png") {
+    [0, 0, 50, 79, -30, -49]
+}
+spritelayout tam_layout_v2_5_3 {
+    ground { sprite: tam_g_v2_5_3; }
+    building { sprite: tam_b_v2_5_3; zextent: 50; }
+}
+spriteset(tam_g_v2_6_3, "sprites/tiananmen/g_v2_6_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_6_3, "sprites/tiananmen/b_v2_6_3.png") {
+    [0, 0, 51, 47, -31, -27]
+}
+spritelayout tam_layout_v2_6_3 {
+    ground { sprite: tam_g_v2_6_3; }
+    building { sprite: tam_b_v2_6_3; zextent: 29; }
+}
+spriteset(tam_g_v2_7_3, "sprites/tiananmen/g_v2_7_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v2_7_3, "sprites/tiananmen/b_v2_7_3.png") {
+    [0, 0, 45, 31, -25, -18]
+}
+spritelayout tam_layout_v2_7_3 {
+    ground { sprite: tam_g_v2_7_3; }
+    building { sprite: tam_b_v2_7_3; zextent: 19; }
+}
+switch (FEAT_OBJECTS, SELF, tam_tiles_2, relative_pos) {
+    relative_coord(0,0): tam_layout_v2_0_0;
+    relative_coord(1,0): tam_layout_v2_1_0;
+    relative_coord(2,0): tam_layout_v2_2_0;
+    relative_coord(3,0): tam_layout_v2_3_0;
+    relative_coord(4,0): tam_layout_v2_4_0;
+    relative_coord(5,0): tam_layout_v2_5_0;
+    relative_coord(6,0): tam_layout_v2_6_0;
+    relative_coord(7,0): tam_layout_v2_7_0;
+    relative_coord(0,1): tam_layout_v2_0_1;
+    relative_coord(1,1): tam_layout_v2_1_1;
+    relative_coord(2,1): tam_layout_v2_2_1;
+    relative_coord(3,1): tam_layout_v2_3_1;
+    relative_coord(4,1): tam_layout_v2_4_1;
+    relative_coord(5,1): tam_layout_v2_5_1;
+    relative_coord(6,1): tam_layout_v2_6_1;
+    relative_coord(7,1): tam_layout_v2_7_1;
+    relative_coord(0,2): tam_layout_v2_0_2;
+    relative_coord(1,2): tam_layout_v2_1_2;
+    relative_coord(2,2): tam_layout_v2_2_2;
+    relative_coord(3,2): tam_layout_v2_3_2;
+    relative_coord(4,2): tam_layout_v2_4_2;
+    relative_coord(5,2): tam_layout_v2_5_2;
+    relative_coord(6,2): tam_layout_v2_6_2;
+    relative_coord(7,2): tam_layout_v2_7_2;
+    relative_coord(0,3): tam_layout_v2_0_3;
+    relative_coord(1,3): tam_layout_v2_1_3;
+    relative_coord(2,3): tam_layout_v2_2_3;
+    relative_coord(3,3): tam_layout_v2_3_3;
+    relative_coord(4,3): tam_layout_v2_4_3;
+    relative_coord(5,3): tam_layout_v2_5_3;
+    relative_coord(6,3): tam_layout_v2_6_3;
+    relative_coord(7,3): tam_layout_v2_7_3;
+    tam_layout_v2_0_0;
+}
+spriteset(tam_menu_3, "sprites/tiananmen/purchase3.png") {
+    [0, 0, 128, 66, -64, -33]
+}
+spritelayout tam_menu_layout_3 {
+    ground { sprite: 0; }
+    building { sprite: tam_menu_3; zextent: 66; }
+}
+spriteset(tam_g_v3_0_0, "sprites/tiananmen/g_v3_0_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_0_0, "sprites/tiananmen/b_v3_0_0.png") {
+    [0, 0, 44, 19, -25, 1]
+}
+spritelayout tam_layout_v3_0_0 {
+    ground { sprite: tam_g_v3_0_0; }
+    building { sprite: tam_b_v3_0_0; zextent: 19; }
+}
+spriteset(tam_g_v3_1_0, "sprites/tiananmen/g_v3_1_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_1_0, "sprites/tiananmen/b_v3_1_0.png") {
+    [0, 0, 54, 42, -23, -20]
+}
+spritelayout tam_layout_v3_1_0 {
+    ground { sprite: tam_g_v3_1_0; }
+    building { sprite: tam_b_v3_1_0; zextent: 28; }
+}
+spriteset(tam_g_v3_2_0, "sprites/tiananmen/g_v3_2_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_2_0, "sprites/tiananmen/b_v3_2_0.png") {
+    [0, 0, 57, 34, -25, -6]
+}
+spritelayout tam_layout_v3_2_0 {
+    ground { sprite: tam_g_v3_2_0; }
+    building { sprite: tam_b_v3_2_0; zextent: 12; }
+}
+spriteset(tam_g_v3_3_0, "sprites/tiananmen/g_v3_3_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_3_0, "sprites/tiananmen/b_v3_3_0.png") {
+    [0, 0, 33, 23, -10, 5]
+}
+spritelayout tam_layout_v3_3_0 {
+    ground { sprite: tam_g_v3_3_0; }
+    building { sprite: tam_b_v3_3_0; zextent: 4; }
+}
+spriteset(tam_g_v3_0_1, "sprites/tiananmen/g_v3_0_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_0_1, "sprites/tiananmen/b_v3_0_1.png") {
+    [0, 0, 17, 8, -29, -3]
+}
+spritelayout tam_layout_v3_0_1 {
+    ground { sprite: tam_g_v3_0_1; }
+    building { sprite: tam_b_v3_0_1; zextent: 19; }
+}
+spriteset(tam_g_v3_1_1, "sprites/tiananmen/g_v3_1_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_1_1, "sprites/tiananmen/b_v3_1_1.png") {
+    [0, 0, 48, 51, -32, -24]
+}
+spritelayout tam_layout_v3_1_1 {
+    ground { sprite: tam_g_v3_1_1; }
+    building { sprite: tam_b_v3_1_1; zextent: 36; }
+}
+spriteset(tam_g_v3_2_1, "sprites/tiananmen/g_v3_2_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_2_1, "sprites/tiananmen/b_v3_2_1.png") {
+    [0, 0, 56, 41, -25, -14]
+}
+spritelayout tam_layout_v3_2_1 {
+    ground { sprite: tam_g_v3_2_1; }
+    building { sprite: tam_b_v3_2_1; zextent: 29; }
+}
+spriteset(tam_g_v3_3_1, "sprites/tiananmen/g_v3_3_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_3_1, "sprites/tiananmen/b_v3_3_1.png") {
+    [0, 0, 51, 19, -25, 2]
+}
+spritelayout tam_layout_v3_3_1 {
+    ground { sprite: tam_g_v3_3_1; }
+    building { sprite: tam_b_v3_3_1; zextent: 5; }
+}
+spriteset(tam_g_v3_0_2, "sprites/tiananmen/g_v3_0_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_0_2, "sprites/tiananmen/b_v3_0_2.png") {
+    [0, 0, 32, 16, -22, -34]
+}
+spritelayout tam_layout_v3_0_2 {
+    ground { sprite: tam_g_v3_0_2; }
+    building { sprite: tam_b_v3_0_2; zextent: 50; }
+}
+spriteset(tam_g_v3_1_2, "sprites/tiananmen/g_v3_1_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_1_2, "sprites/tiananmen/b_v3_1_2.png") {
+    [0, 0, 61, 68, -30, -42]
+}
+spritelayout tam_layout_v3_1_2 {
+    ground { sprite: tam_g_v3_1_2; }
+    building { sprite: tam_b_v3_1_2; zextent: 60; }
+}
+spriteset(tam_g_v3_2_2, "sprites/tiananmen/g_v3_2_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_2_2, "sprites/tiananmen/b_v3_2_2.png") {
+    [0, 0, 54, 51, -23, -27]
+}
+spritelayout tam_layout_v3_2_2 {
+    ground { sprite: tam_g_v3_2_2; }
+    building { sprite: tam_b_v3_2_2; zextent: 29; }
+}
+spriteset(tam_g_v3_3_2, "sprites/tiananmen/g_v3_3_2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_3_2, "sprites/tiananmen/b_v3_3_2.png") {
+    [0, 0, 34, 20, -7, -2]
+}
+spritelayout tam_layout_v3_3_2 {
+    ground { sprite: tam_g_v3_3_2; }
+    building { sprite: tam_b_v3_3_2; zextent: 11; }
+}
+spriteset(tam_g_v3_0_3, "sprites/tiananmen/g_v3_0_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_0_3, "sprites/tiananmen/b_v3_0_3.png") {
+    [0, 0, 40, 17, -30, -35]
+}
+spritelayout tam_layout_v3_0_3 {
+    ground { sprite: tam_g_v3_0_3; }
+    building { sprite: tam_b_v3_0_3; zextent: 50; }
+}
+spriteset(tam_g_v3_1_3, "sprites/tiananmen/g_v3_1_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_1_3, "sprites/tiananmen/b_v3_1_3.png") {
+    [0, 0, 63, 82, -32, -52]
+}
+spritelayout tam_layout_v3_1_3 {
+    ground { sprite: tam_g_v3_1_3; }
+    building { sprite: tam_b_v3_1_3; zextent: 57; }
+}
+spriteset(tam_g_v3_2_3, "sprites/tiananmen/g_v3_2_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_2_3, "sprites/tiananmen/b_v3_2_3.png") {
+    [0, 0, 59, 54, -28, -27]
+}
+spritelayout tam_layout_v3_2_3 {
+    ground { sprite: tam_g_v3_2_3; }
+    building { sprite: tam_b_v3_2_3; zextent: 29; }
+}
+spriteset(tam_g_v3_3_3, "sprites/tiananmen/g_v3_3_3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_3_3, "sprites/tiananmen/b_v3_3_3.png") {
+    [0, 0, 38, 27, -6, -6]
+}
+spritelayout tam_layout_v3_3_3 {
+    ground { sprite: tam_g_v3_3_3; }
+    building { sprite: tam_b_v3_3_3; zextent: 10; }
+}
+spriteset(tam_g_v3_0_4, "sprites/tiananmen/g_v3_0_4.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_0_4, "sprites/tiananmen/b_v3_0_4.png") {
+    [0, 0, 40, 17, -30, -35]
+}
+spritelayout tam_layout_v3_0_4 {
+    ground { sprite: tam_g_v3_0_4; }
+    building { sprite: tam_b_v3_0_4; zextent: 50; }
+}
+spriteset(tam_g_v3_1_4, "sprites/tiananmen/g_v3_1_4.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_1_4, "sprites/tiananmen/b_v3_1_4.png") {
+    [0, 0, 63, 77, -32, -52]
+}
+spritelayout tam_layout_v3_1_4 {
+    ground { sprite: tam_g_v3_1_4; }
+    building { sprite: tam_b_v3_1_4; zextent: 57; }
+}
+spriteset(tam_g_v3_2_4, "sprites/tiananmen/g_v3_2_4.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_2_4, "sprites/tiananmen/b_v3_2_4.png") {
+    [0, 0, 62, 53, -31, -27]
+}
+spritelayout tam_layout_v3_2_4 {
+    ground { sprite: tam_g_v3_2_4; }
+    building { sprite: tam_b_v3_2_4; zextent: 29; }
+}
+spriteset(tam_g_v3_3_4, "sprites/tiananmen/g_v3_3_4.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_3_4, "sprites/tiananmen/b_v3_3_4.png") {
+    [0, 0, 34, 24, -7, -6]
+}
+spritelayout tam_layout_v3_3_4 {
+    ground { sprite: tam_g_v3_3_4; }
+    building { sprite: tam_b_v3_3_4; zextent: 10; }
+}
+spriteset(tam_g_v3_0_5, "sprites/tiananmen/g_v3_0_5.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_0_5, "sprites/tiananmen/b_v3_0_5.png") {
+    [0, 0, 59, 55, -30, -35]
+}
+spritelayout tam_layout_v3_0_5 {
+    ground { sprite: tam_g_v3_0_5; }
+    building { sprite: tam_b_v3_0_5; zextent: 50; }
+}
+spriteset(tam_g_v3_1_5, "sprites/tiananmen/g_v3_1_5.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_1_5, "sprites/tiananmen/b_v3_1_5.png") {
+    [0, 0, 62, 72, -32, -52]
+}
+spritelayout tam_layout_v3_1_5 {
+    ground { sprite: tam_g_v3_1_5; }
+    building { sprite: tam_b_v3_1_5; zextent: 60; }
+}
+spriteset(tam_g_v3_2_5, "sprites/tiananmen/g_v3_2_5.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_2_5, "sprites/tiananmen/b_v3_2_5.png") {
+    [0, 0, 54, 54, -23, -27]
+}
+spritelayout tam_layout_v3_2_5 {
+    ground { sprite: tam_g_v3_2_5; }
+    building { sprite: tam_b_v3_2_5; zextent: 29; }
+}
+spriteset(tam_g_v3_3_5, "sprites/tiananmen/g_v3_3_5.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_3_5, "sprites/tiananmen/b_v3_3_5.png") {
+    [0, 0, 32, 25, -6, -6]
+}
+spritelayout tam_layout_v3_3_5 {
+    ground { sprite: tam_g_v3_3_5; }
+    building { sprite: tam_b_v3_3_5; zextent: 11; }
+}
+spriteset(tam_g_v3_0_6, "sprites/tiananmen/g_v3_0_6.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_0_6, "sprites/tiananmen/b_v3_0_6.png") {
+    [0, 0, 47, 40, -31, -21]
+}
+spritelayout tam_layout_v3_0_6 {
+    ground { sprite: tam_g_v3_0_6; }
+    building { sprite: tam_b_v3_0_6; zextent: 29; }
+}
+spriteset(tam_g_v3_1_6, "sprites/tiananmen/g_v3_1_6.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_1_6, "sprites/tiananmen/b_v3_1_6.png") {
+    [0, 0, 62, 50, -31, -28]
+}
+spritelayout tam_layout_v3_1_6 {
+    ground { sprite: tam_g_v3_1_6; }
+    building { sprite: tam_b_v3_1_6; zextent: 29; }
+}
+spriteset(tam_g_v3_2_6, "sprites/tiananmen/g_v3_2_6.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_2_6, "sprites/tiananmen/b_v3_2_6.png") {
+    [0, 0, 55, 56, -23, -28]
+}
+spritelayout tam_layout_v3_2_6 {
+    ground { sprite: tam_g_v3_2_6; }
+    building { sprite: tam_b_v3_2_6; zextent: 29; }
+}
+spriteset(tam_g_v3_3_6, "sprites/tiananmen/g_v3_3_6.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_3_6, "sprites/tiananmen/b_v3_3_6.png") {
+    [0, 0, 30, 28, -7, 0]
+}
+spritelayout tam_layout_v3_3_6 {
+    ground { sprite: tam_g_v3_3_6; }
+    building { sprite: tam_b_v3_3_6; zextent: 5; }
+}
+spriteset(tam_g_v3_0_7, "sprites/tiananmen/g_v3_0_7.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_0_7, "sprites/tiananmen/b_v3_0_7.png") {
+    [0, 0, 26, 30, -31, -3]
+}
+spritelayout tam_layout_v3_0_7 {
+    ground { sprite: tam_g_v3_0_7; }
+    building { sprite: tam_b_v3_0_7; zextent: 19; }
+}
+spriteset(tam_g_v3_1_7, "sprites/tiananmen/g_v3_1_7.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_1_7, "sprites/tiananmen/b_v3_1_7.png") {
+    [0, 0, 57, 52, -32, -25]
+}
+spritelayout tam_layout_v3_1_7 {
+    ground { sprite: tam_g_v3_1_7; }
+    building { sprite: tam_b_v3_1_7; zextent: 28; }
+}
+spriteset(tam_g_v3_2_7, "sprites/tiananmen/g_v3_2_7.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_2_7, "sprites/tiananmen/b_v3_2_7.png") {
+    [0, 0, 50, 37, -25, -9]
+}
+spritelayout tam_layout_v3_2_7 {
+    ground { sprite: tam_g_v3_2_7; }
+    building { sprite: tam_b_v3_2_7; zextent: 12; }
+}
+spriteset(tam_g_v3_3_7, "sprites/tiananmen/g_v3_3_7.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(tam_b_v3_3_7, "sprites/tiananmen/b_v3_3_7.png") {
+    [0, 0, 42, 18, -25, 2]
+}
+spritelayout tam_layout_v3_3_7 {
+    ground { sprite: tam_g_v3_3_7; }
+    building { sprite: tam_b_v3_3_7; zextent: 4; }
+}
+switch (FEAT_OBJECTS, SELF, tam_tiles_3, relative_pos) {
+    relative_coord(0,0): tam_layout_v3_0_0;
+    relative_coord(1,0): tam_layout_v3_1_0;
+    relative_coord(2,0): tam_layout_v3_2_0;
+    relative_coord(3,0): tam_layout_v3_3_0;
+    relative_coord(0,1): tam_layout_v3_0_1;
+    relative_coord(1,1): tam_layout_v3_1_1;
+    relative_coord(2,1): tam_layout_v3_2_1;
+    relative_coord(3,1): tam_layout_v3_3_1;
+    relative_coord(0,2): tam_layout_v3_0_2;
+    relative_coord(1,2): tam_layout_v3_1_2;
+    relative_coord(2,2): tam_layout_v3_2_2;
+    relative_coord(3,2): tam_layout_v3_3_2;
+    relative_coord(0,3): tam_layout_v3_0_3;
+    relative_coord(1,3): tam_layout_v3_1_3;
+    relative_coord(2,3): tam_layout_v3_2_3;
+    relative_coord(3,3): tam_layout_v3_3_3;
+    relative_coord(0,4): tam_layout_v3_0_4;
+    relative_coord(1,4): tam_layout_v3_1_4;
+    relative_coord(2,4): tam_layout_v3_2_4;
+    relative_coord(3,4): tam_layout_v3_3_4;
+    relative_coord(0,5): tam_layout_v3_0_5;
+    relative_coord(1,5): tam_layout_v3_1_5;
+    relative_coord(2,5): tam_layout_v3_2_5;
+    relative_coord(3,5): tam_layout_v3_3_5;
+    relative_coord(0,6): tam_layout_v3_0_6;
+    relative_coord(1,6): tam_layout_v3_1_6;
+    relative_coord(2,6): tam_layout_v3_2_6;
+    relative_coord(3,6): tam_layout_v3_3_6;
+    relative_coord(0,7): tam_layout_v3_0_7;
+    relative_coord(1,7): tam_layout_v3_1_7;
+    relative_coord(2,7): tam_layout_v3_2_7;
+    relative_coord(3,7): tam_layout_v3_3_7;
+    tam_layout_v3_0_0;
+}
+switch (FEAT_OBJECTS, SELF, tam_world, view) {
+    0: tam_tiles_0;
+    1: tam_tiles_1;
+    2: tam_tiles_2;
+    tam_tiles_3;
+}
+switch (FEAT_OBJECTS, SELF, tam_purchase, view) {
+    0: tam_menu_layout_0;
+    1: tam_menu_layout_1;
+    2: tam_menu_layout_2;
+    tam_menu_layout_3;
+}
+item (FEAT_OBJECTS, tiananmen, 1103) {
+    property {
+        class: "SHLM";
+        name: string(STR_TIANANMEN);
+        climates_available: ALL_CLIMATES;
+        size: [8,4];
+        build_cost_multiplier: 48;
+        remove_cost_multiplier: 24;
+        introduction_date: date(1950,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 8;
+        num_views: 4;
+    }
+    graphics {
+        default: tam_world;
+        purchase: tam_purchase;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}

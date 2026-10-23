@@ -1,0 +1,80 @@
+{
+  "size": [
+    160,
+    160,
+    72
+  ],
+  "center": [
+    80,
+    75
+  ],
+  "voxels_per_tile": 40,
+  "pixels_per_voxel": 0.8,
+  "roofs": [
+    {
+      "outer": 16,
+      "inner": 12,
+      "base": 27,
+      "rise": 3
+    },
+    {
+      "outer": 14,
+      "inner": 10,
+      "base": 38,
+      "rise": 3
+    },
+    {
+      "outer": 12,
+      "inner": 0,
+      "base": 49,
+      "rise": 11
+    }
+  ],
+  "terraces": [
+    {
+      "radius": 28,
+      "base": 1,
+      "riser_top": 3,
+      "coping_z": 4
+    },
+    {
+      "radius": 24,
+      "base": 4,
+      "riser_top": 7,
+      "coping_z": 8
+    },
+    {
+      "radius": 20,
+      "base": 8,
+      "riser_top": 11,
+      "coping_z": 12
+    }
+  ],
+  "architecture_scale_from_v6": 0.5,
+  "baseline_metres_per_unit": 2,
+  "reference_artistic_scale": 2,
+  "real_dimensions": {
+    "total_height_metres": 38,
+    "exterior_column_span_metres": 24,
+    "measurement": "Height includes altar/platform; diameter is between outer eave columns, not roof edge.",
+    "source": "https://www.tiantanpark.cn/scenic_spot_list_g7yU_96/detail/1169.html"
+  },
+  "model_dimensions": {
+    "top_from_z0_units": 66,
+    "vertical_projection_pixels": 52.8,
+    "column_center_span_units": 25,
+    "terrace_coping_heights": [
+      4,
+      8,
+      12
+    ]
+  },
+  "effective_height_scale": 3.473684210526316,
+  "effective_column_span_scale": 2.0833333333333335,
+  "local_adjustments": [
+    "Inherits v6 raised hall, painted drums and terraces; not one uniform real-world scale.",
+    "Architecture shrunk by 0.5 in all axes, with voxel rounding and one-voxel trim.",
+    "Legacy 5-unit visitors and shared paving retain their size."
+  ],
+  "layout": "4x4; three marble terraces, four stair approaches, open stone square"
+}

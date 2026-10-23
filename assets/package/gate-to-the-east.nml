@@ -1,0 +1,33 @@
+switch (FEAT_OBJECTS, SELF, gte_world, view) {
+    0: gte_tiles_0;
+    1: gte_tiles_1;
+    2: gte_tiles_2;
+    gte_tiles_3;
+}
+switch (FEAT_OBJECTS, SELF, gte_purchase, view) {
+    0: gte_menu_layout_0;
+    1: gte_menu_layout_1;
+    2: gte_menu_layout_2;
+    gte_menu_layout_3;
+}
+item (FEAT_OBJECTS, gate_to_the_east, 1110) {
+    property {
+        class: "SHLM";
+        name: string(STR_GATE_TO_THE_EAST);
+        climates_available: ALL_CLIMATES;
+        size: [4,3];
+        build_cost_multiplier: 48;
+        remove_cost_multiplier: 24;
+        introduction_date: date(2015,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 24;
+        num_views: 4;
+    }
+    graphics {
+        default: gte_world;
+        purchase: gte_purchase;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}

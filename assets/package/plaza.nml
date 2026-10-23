@@ -1,0 +1,299 @@
+spriteset(plaza_plain_g_0, "sprites/plaza/plain-g-v0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_plain_b_0, "sprites/plaza/plain-b-v0.png") {
+    [0, 0, 1, 1, 0, 0]
+}
+spritelayout plaza_plain_layout_0 {
+    ground { sprite: plaza_plain_g_0; }
+}
+item (FEAT_OBJECTS, plaza_plain, 1001) {
+    property {
+        class: "SHLM";
+        classname: string(STR_CLASS);
+        name: string(STR_PLAZA_PLAIN);
+        climates_available: ALL_CLIMATES;
+        size: [1,1];
+        build_cost_multiplier: 2;
+        remove_cost_multiplier: 1;
+        introduction_date: date(1900,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 1;
+        num_views: 1;
+    }
+    graphics {
+        default: plaza_plain_layout_0;
+        purchase: plaza_plain_layout_0;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}
+spriteset(plaza_walkers_g_0, "sprites/plaza/walkers-g-v0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_walkers_b_0, "sprites/plaza/walkers-b-v0.png") {
+    [0, 0, 11, 17, -2, 5]
+}
+spritelayout plaza_walkers_layout_0 {
+    ground { sprite: plaza_walkers_g_0; }
+    building { sprite: plaza_walkers_b_0; zextent: 5; }
+}
+spriteset(plaza_walkers_g_1, "sprites/plaza/walkers-g-v1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_walkers_b_1, "sprites/plaza/walkers-b-v1.png") {
+    [0, 0, 27, 8, -13, 8]
+}
+spritelayout plaza_walkers_layout_1 {
+    ground { sprite: plaza_walkers_g_1; }
+    building { sprite: plaza_walkers_b_1; zextent: 5; }
+}
+spriteset(plaza_walkers_g_2, "sprites/plaza/walkers-g-v2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_walkers_b_2, "sprites/plaza/walkers-b-v2.png") {
+    [0, 0, 11, 17, -9, 5]
+}
+spritelayout plaza_walkers_layout_2 {
+    ground { sprite: plaza_walkers_g_2; }
+    building { sprite: plaza_walkers_b_2; zextent: 5; }
+}
+spriteset(plaza_walkers_g_3, "sprites/plaza/walkers-g-v3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_walkers_b_3, "sprites/plaza/walkers-b-v3.png") {
+    [0, 0, 27, 8, -14, 11]
+}
+spritelayout plaza_walkers_layout_3 {
+    ground { sprite: plaza_walkers_g_3; }
+    building { sprite: plaza_walkers_b_3; zextent: 5; }
+}
+switch (FEAT_OBJECTS, SELF, plaza_walkers_views, view) {
+    0: plaza_walkers_layout_0;
+    1: plaza_walkers_layout_1;
+    2: plaza_walkers_layout_2;
+    plaza_walkers_layout_3;
+}
+item (FEAT_OBJECTS, plaza_walkers, 1002) {
+    property {
+        class: "SHLM";
+        name: string(STR_PLAZA_WALKERS);
+        climates_available: ALL_CLIMATES;
+        size: [1,1];
+        build_cost_multiplier: 4;
+        remove_cost_multiplier: 1;
+        introduction_date: date(1900,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 1;
+        num_views: 4;
+    }
+    graphics {
+        default: plaza_walkers_views;
+        purchase: plaza_walkers_views;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}
+spriteset(plaza_meeting_g_0, "sprites/plaza/meeting-g-v0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_meeting_b_0, "sprites/plaza/meeting-b-v0.png") {
+    [0, 0, 19, 14, -9, 5]
+}
+spritelayout plaza_meeting_layout_0 {
+    ground { sprite: plaza_meeting_g_0; }
+    building { sprite: plaza_meeting_b_0; zextent: 5; }
+}
+spriteset(plaza_meeting_g_1, "sprites/plaza/meeting-g-v1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_meeting_b_1, "sprites/plaza/meeting-b-v1.png") {
+    [0, 0, 21, 12, -13, 8]
+}
+spritelayout plaza_meeting_layout_1 {
+    ground { sprite: plaza_meeting_g_1; }
+    building { sprite: plaza_meeting_b_1; zextent: 5; }
+}
+spriteset(plaza_meeting_g_2, "sprites/plaza/meeting-g-v2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_meeting_b_2, "sprites/plaza/meeting-b-v2.png") {
+    [0, 0, 19, 12, -10, 9]
+}
+spritelayout plaza_meeting_layout_2 {
+    ground { sprite: plaza_meeting_g_2; }
+    building { sprite: plaza_meeting_b_2; zextent: 5; }
+}
+spriteset(plaza_meeting_g_3, "sprites/plaza/meeting-g-v3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_meeting_b_3, "sprites/plaza/meeting-b-v3.png") {
+    [0, 0, 21, 13, -8, 7]
+}
+spritelayout plaza_meeting_layout_3 {
+    ground { sprite: plaza_meeting_g_3; }
+    building { sprite: plaza_meeting_b_3; zextent: 5; }
+}
+switch (FEAT_OBJECTS, SELF, plaza_meeting_views, view) {
+    0: plaza_meeting_layout_0;
+    1: plaza_meeting_layout_1;
+    2: plaza_meeting_layout_2;
+    plaza_meeting_layout_3;
+}
+item (FEAT_OBJECTS, plaza_meeting, 1003) {
+    property {
+        class: "SHLM";
+        name: string(STR_PLAZA_MEETING);
+        climates_available: ALL_CLIMATES;
+        size: [1,1];
+        build_cost_multiplier: 4;
+        remove_cost_multiplier: 1;
+        introduction_date: date(1900,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 1;
+        num_views: 4;
+    }
+    graphics {
+        default: plaza_meeting_views;
+        purchase: plaza_meeting_views;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}
+spriteset(plaza_bench_g_0, "sprites/plaza/bench-g-v0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_bench_b_0, "sprites/plaza/bench-b-v0.png") {
+    [0, 0, 15, 16, -6, 7]
+}
+spritelayout plaza_bench_layout_0 {
+    ground { sprite: plaza_bench_g_0; }
+    building { sprite: plaza_bench_b_0; zextent: 5; }
+}
+spriteset(plaza_bench_g_1, "sprites/plaza/bench-g-v1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_bench_b_1, "sprites/plaza/bench-b-v1.png") {
+    [0, 0, 24, 10, -9, 8]
+}
+spritelayout plaza_bench_layout_1 {
+    ground { sprite: plaza_bench_g_1; }
+    building { sprite: plaza_bench_b_1; zextent: 5; }
+}
+spriteset(plaza_bench_g_2, "sprites/plaza/bench-g-v2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_bench_b_2, "sprites/plaza/bench-b-v2.png") {
+    [0, 0, 15, 15, -9, 4]
+}
+spritelayout plaza_bench_layout_2 {
+    ground { sprite: plaza_bench_g_2; }
+    building { sprite: plaza_bench_b_2; zextent: 5; }
+}
+spriteset(plaza_bench_g_3, "sprites/plaza/bench-g-v3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_bench_b_3, "sprites/plaza/bench-b-v3.png") {
+    [0, 0, 24, 11, -15, 8]
+}
+spritelayout plaza_bench_layout_3 {
+    ground { sprite: plaza_bench_g_3; }
+    building { sprite: plaza_bench_b_3; zextent: 5; }
+}
+switch (FEAT_OBJECTS, SELF, plaza_bench_views, view) {
+    0: plaza_bench_layout_0;
+    1: plaza_bench_layout_1;
+    2: plaza_bench_layout_2;
+    plaza_bench_layout_3;
+}
+item (FEAT_OBJECTS, plaza_bench, 1004) {
+    property {
+        class: "SHLM";
+        name: string(STR_PLAZA_BENCH);
+        climates_available: ALL_CLIMATES;
+        size: [1,1];
+        build_cost_multiplier: 4;
+        remove_cost_multiplier: 1;
+        introduction_date: date(1900,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 1;
+        num_views: 4;
+    }
+    graphics {
+        default: plaza_bench_views;
+        purchase: plaza_bench_views;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}
+spriteset(plaza_tree_g_0, "sprites/plaza/tree-g-v0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_tree_b_0, "sprites/plaza/tree-b-v0.png") {
+    [0, 0, 18, 22, -9, 2]
+}
+spritelayout plaza_tree_layout_0 {
+    ground { sprite: plaza_tree_g_0; }
+    building { sprite: plaza_tree_b_0; zextent: 13; }
+}
+spriteset(plaza_tree_g_1, "sprites/plaza/tree-g-v1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_tree_b_1, "sprites/plaza/tree-b-v1.png") {
+    [0, 0, 26, 18, -9, 2]
+}
+spritelayout plaza_tree_layout_1 {
+    ground { sprite: plaza_tree_g_1; }
+    building { sprite: plaza_tree_b_1; zextent: 13; }
+}
+spriteset(plaza_tree_g_2, "sprites/plaza/tree-g-v2.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_tree_b_2, "sprites/plaza/tree-b-v2.png") {
+    [0, 0, 18, 18, -9, 2]
+}
+spritelayout plaza_tree_layout_2 {
+    ground { sprite: plaza_tree_g_2; }
+    building { sprite: plaza_tree_b_2; zextent: 13; }
+}
+spriteset(plaza_tree_g_3, "sprites/plaza/tree-g-v3.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(plaza_tree_b_3, "sprites/plaza/tree-b-v3.png") {
+    [0, 0, 26, 18, -17, 2]
+}
+spritelayout plaza_tree_layout_3 {
+    ground { sprite: plaza_tree_g_3; }
+    building { sprite: plaza_tree_b_3; zextent: 13; }
+}
+switch (FEAT_OBJECTS, SELF, plaza_tree_views, view) {
+    0: plaza_tree_layout_0;
+    1: plaza_tree_layout_1;
+    2: plaza_tree_layout_2;
+    plaza_tree_layout_3;
+}
+item (FEAT_OBJECTS, plaza_tree, 1005) {
+    property {
+        class: "SHLM";
+        name: string(STR_PLAZA_TREE);
+        climates_available: ALL_CLIMATES;
+        size: [1,1];
+        build_cost_multiplier: 4;
+        remove_cost_multiplier: 1;
+        introduction_date: date(1900,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 2;
+        num_views: 4;
+    }
+    graphics {
+        default: plaza_tree_views;
+        purchase: plaza_tree_views;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}

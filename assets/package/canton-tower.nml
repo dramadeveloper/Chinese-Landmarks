@@ -1,0 +1,33 @@
+switch (FEAT_OBJECTS, SELF, ct_world, view) {
+    0: ct_tiles_0;
+    1: ct_tiles_1;
+    2: ct_tiles_2;
+    ct_tiles_3;
+}
+switch (FEAT_OBJECTS, SELF, ct_purchase, view) {
+    0: ct_menu_layout_0;
+    1: ct_menu_layout_1;
+    2: ct_menu_layout_2;
+    ct_menu_layout_3;
+}
+item (FEAT_OBJECTS, canton_tower, 1107) {
+    property {
+        class: "SHLM";
+        name: string(STR_CANTON_TOWER);
+        climates_available: ALL_CLIMATES;
+        size: [3,3];
+        build_cost_multiplier: 48;
+        remove_cost_multiplier: 24;
+        introduction_date: date(2010,10,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 40;
+        num_views: 4;
+    }
+    graphics {
+        default: ct_world;
+        purchase: ct_purchase;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}

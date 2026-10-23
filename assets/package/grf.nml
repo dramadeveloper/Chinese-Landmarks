@@ -1,0 +1,13 @@
+grf {
+    grfid: "OPRL";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESC);
+    // Project version 0.1.0: (major << 16) | (minor << 8) | patch.
+    version: (0 << 16) | (1 << 8) | 0;
+    min_compatible_version: 14;
+}
+
+switch (FEAT_OBJECTS, SELF, level_ground_only, extra_callback_info1 & 0x1F) {
+    0: CB_FAILED;
+    return CB_RESULT_LOCATION_DISALLOW;
+}

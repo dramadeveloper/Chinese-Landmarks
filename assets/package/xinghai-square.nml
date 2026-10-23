@@ -1,0 +1,33 @@
+switch (FEAT_OBJECTS, SELF, xh_world, view) {
+    0: xh_tiles_0;
+    1: xh_tiles_1;
+    2: xh_tiles_2;
+    xh_tiles_3;
+}
+switch (FEAT_OBJECTS, SELF, xh_purchase, view) {
+    0: xh_menu_layout_0;
+    1: xh_menu_layout_1;
+    2: xh_menu_layout_2;
+    xh_menu_layout_3;
+}
+item (FEAT_OBJECTS, xinghai_square, 1108) {
+    property {
+        class: "SHLM";
+        name: string(STR_XINGHAI_SQUARE);
+        climates_available: ALL_CLIMATES;
+        size: [5,5];
+        build_cost_multiplier: 48;
+        remove_cost_multiplier: 24;
+        introduction_date: date(1997,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 8;
+        num_views: 4;
+    }
+    graphics {
+        default: xh_world;
+        purchase: xh_purchase;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}

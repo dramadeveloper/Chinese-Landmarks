@@ -1,0 +1,33 @@
+switch (FEAT_OBJECTS, SELF, xbt_world, view) {
+    0: xbt_tiles_0;
+    1: xbt_tiles_1;
+    2: xbt_tiles_2;
+    xbt_tiles_3;
+}
+switch (FEAT_OBJECTS, SELF, xbt_purchase, view) {
+    0: xbt_menu_layout_0;
+    1: xbt_menu_layout_1;
+    2: xbt_menu_layout_2;
+    xbt_menu_layout_3;
+}
+item (FEAT_OBJECTS, xian_bell_tower, 1106) {
+    property {
+        class: "SHLM";
+        name: string(STR_XIAN_BELL_TOWER);
+        climates_available: ALL_CLIMATES;
+        size: [3,3];
+        build_cost_multiplier: 48;
+        remove_cost_multiplier: 24;
+        introduction_date: date(1384,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 9;
+        num_views: 4;
+    }
+    graphics {
+        default: xbt_world;
+        purchase: xbt_purchase;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}

@@ -1,0 +1,33 @@
+switch (FEAT_OBJECTS, SELF, yct_world, view) {
+    0: yct_tiles_0;
+    1: yct_tiles_1;
+    2: yct_tiles_2;
+    yct_tiles_3;
+}
+switch (FEAT_OBJECTS, SELF, yct_purchase, view) {
+    0: yct_menu_layout_0;
+    1: yct_menu_layout_1;
+    2: yct_menu_layout_2;
+    yct_menu_layout_3;
+}
+item (FEAT_OBJECTS, yellow_crane_tower, 1109) {
+    property {
+        class: "SHLM";
+        name: string(STR_YELLOW_CRANE_TOWER);
+        climates_available: ALL_CLIMATES;
+        size: [3,3];
+        build_cost_multiplier: 48;
+        remove_cost_multiplier: 24;
+        introduction_date: date(1985,6,11);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 12;
+        num_views: 4;
+    }
+    graphics {
+        default: yct_world;
+        purchase: yct_purchase;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}

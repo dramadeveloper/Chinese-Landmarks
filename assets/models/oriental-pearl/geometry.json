@@ -1,0 +1,56 @@
+{
+  "pearls": [
+    {
+      "center": [
+        80,
+        80,
+        49
+      ],
+      "r": 13,
+      "rz": 15,
+      "kind": "lower"
+    },
+    {
+      "center": [
+        80,
+        80,
+        138
+      ],
+      "r": 11,
+      "rz": 13,
+      "kind": "upper"
+    },
+    {
+      "center": [
+        80,
+        80,
+        173
+      ],
+      "r": 4,
+      "rz": 5,
+      "kind": "capsule"
+    }
+  ],
+  "columns": [
+    [
+      80,
+      86
+    ],
+    [
+      75,
+      77
+    ],
+    [
+      85,
+      77
+    ]
+  ],
+  "size": [
+    160,
+    160,
+    240
+  ],
+  "metres_per_voxel": 2,
+  "voxels_per_tile": 40,
+  "pixels_per_voxel": 0.8
+}

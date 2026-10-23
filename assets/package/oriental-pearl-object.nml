@@ -1,0 +1,314 @@
+
+spriteset(menu_0, "sprites/oriental-pearl/purchase-view0.png") {
+    [0, 0, 63, 138, -32, -106]
+}
+spritelayout menu_layout_0 {
+    ground { sprite: 0; }
+    building { sprite: menu_0; zextent: 138; }
+}
+spriteset(g_v0_0_0, "sprites/oriental-pearl/g_v0_0_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v0_0_0_low, "sprites/oriental-pearl/b_v0_0_0_low.png") {
+    [0, 0, 27, 111, -16, -87]
+}
+spriteset(b_v0_0_0_high, "sprites/oriental-pearl/b_v0_0_0_high.png") {
+    [0, 0, 8, 2, -4, -1]
+}
+spritelayout layout_v0_0_0 {
+    ground { sprite: g_v0_0_0; }
+    building { sprite: b_v0_0_0_low; zoffset: 0; zextent: 117; }
+    building { sprite: b_v0_0_0_high; zoffset: 127; zextent: 30; }
+}
+spriteset(g_v0_1_0, "sprites/oriental-pearl/g_v0_1_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v0_1_0_low, "sprites/oriental-pearl/b_v0_1_0_low.png") {
+    [0, 0, 42, 133, -11, -111]
+}
+spriteset(b_v0_1_0_high, "sprites/oriental-pearl/b_v0_1_0_high.png") {
+    [0, 0, 15, 61, 15, -43]
+}
+spritelayout layout_v0_1_0 {
+    ground { sprite: g_v0_1_0; }
+    building { sprite: b_v0_1_0_low; zoffset: 0; zextent: 128; }
+    building { sprite: b_v0_1_0_high; zoffset: 127; zextent: 58; }
+}
+spriteset(g_v0_0_1, "sprites/oriental-pearl/g_v0_0_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v0_0_1_low, "sprites/oriental-pearl/b_v0_0_1_low.png") {
+    [0, 0, 32, 139, -31, -111]
+}
+spriteset(b_v0_0_1_high, "sprites/oriental-pearl/b_v0_0_1_high.png") {
+    [0, 0, 15, 55, -30, -43]
+}
+spritelayout layout_v0_0_1 {
+    ground { sprite: g_v0_0_1; }
+    building { sprite: b_v0_0_1_low; zoffset: 0; zextent: 126; }
+    building { sprite: b_v0_0_1_high; zoffset: 127; zextent: 58; }
+}
+spriteset(g_v0_1_1, "sprites/oriental-pearl/g_v0_1_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v0_1_1_low, "sprites/oriental-pearl/b_v0_1_1_low.png") {
+    [0, 0, 51, 141, -20, -127]
+}
+spriteset(b_v0_1_1_high, "sprites/oriental-pearl/b_v0_1_1_high.png") {
+    [0, 0, 26, 122, -13, -118]
+}
+spritelayout layout_v0_1_1 {
+    ground { sprite: g_v0_1_1; }
+    building { sprite: b_v0_1_1_low; zoffset: 0; zextent: 128; }
+    building { sprite: b_v0_1_1_high; zoffset: 127; zextent: 119; }
+}
+switch (FEAT_OBJECTS, SELF, tile_view_0, relative_pos) {
+    relative_coord(0,0): layout_v0_0_0;
+    relative_coord(1,0): layout_v0_1_0;
+    relative_coord(0,1): layout_v0_0_1;
+    relative_coord(1,1): layout_v0_1_1;
+    layout_v0_0_0;
+}
+spriteset(menu_1, "sprites/oriental-pearl/purchase-view1.png") {
+    [0, 0, 63, 139, -32, -107]
+}
+spritelayout menu_layout_1 {
+    ground { sprite: 0; }
+    building { sprite: menu_1; zextent: 139; }
+}
+spriteset(g_v1_0_0, "sprites/oriental-pearl/g_v1_0_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v1_0_0_low, "sprites/oriental-pearl/b_v1_0_0_low.png") {
+    [0, 0, 47, 118, -17, -95]
+}
+spriteset(b_v1_0_0_high, "sprites/oriental-pearl/b_v1_0_0_high.png") {
+    [0, 0, 9, 52, -9, -50]
+}
+spritelayout layout_v1_0_0 {
+    ground { sprite: g_v1_0_0; }
+    building { sprite: b_v1_0_0_low; zoffset: 0; zextent: 126; }
+    building { sprite: b_v1_0_0_high; zoffset: 127; zextent: 82; }
+}
+spriteset(g_v1_1_0, "sprites/oriental-pearl/g_v1_1_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v1_1_0_low, "sprites/oriental-pearl/b_v1_1_0_low.png") {
+    [0, 0, 41, 134, -10, -112]
+}
+spriteset(b_v1_1_0_high, "sprites/oriental-pearl/b_v1_1_0_high.png") {
+    [0, 0, 15, 59, 16, -43]
+}
+spritelayout layout_v1_1_0 {
+    ground { sprite: g_v1_1_0; }
+    building { sprite: b_v1_1_0_low; zoffset: 0; zextent: 128; }
+    building { sprite: b_v1_1_0_high; zoffset: 127; zextent: 58; }
+}
+spriteset(g_v1_0_1, "sprites/oriental-pearl/g_v1_0_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v1_0_1_low, "sprites/oriental-pearl/b_v1_0_1_low.png") {
+    [0, 0, 27, 137, -26, -114]
+}
+spriteset(b_v1_0_1_high, "sprites/oriental-pearl/b_v1_0_1_high.png") {
+    [0, 0, 17, 118, -32, -103]
+}
+spritelayout layout_v1_0_1 {
+    ground { sprite: g_v1_0_1; }
+    building { sprite: b_v1_0_1_low; zoffset: 0; zextent: 128; }
+    building { sprite: b_v1_0_1_high; zoffset: 127; zextent: 119; }
+}
+spriteset(g_v1_1_1, "sprites/oriental-pearl/g_v1_1_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v1_1_1_low, "sprites/oriental-pearl/b_v1_1_1_low.png") {
+    [0, 0, 36, 144, -18, -125]
+}
+spriteset(b_v1_1_1_high, "sprites/oriental-pearl/b_v1_1_1_high.png") {
+    [0, 0, 22, 86, -11, -81]
+}
+spritelayout layout_v1_1_1 {
+    ground { sprite: g_v1_1_1; }
+    building { sprite: b_v1_1_1_low; zoffset: 0; zextent: 128; }
+    building { sprite: b_v1_1_1_high; zoffset: 127; zextent: 82; }
+}
+switch (FEAT_OBJECTS, SELF, tile_view_1, relative_pos) {
+    relative_coord(0,0): layout_v1_0_0;
+    relative_coord(1,0): layout_v1_1_0;
+    relative_coord(0,1): layout_v1_0_1;
+    relative_coord(1,1): layout_v1_1_1;
+    layout_v1_0_0;
+}
+spriteset(menu_2, "sprites/oriental-pearl/purchase-view2.png") {
+    [0, 0, 63, 139, -32, -107]
+}
+spritelayout menu_layout_2 {
+    ground { sprite: 0; }
+    building { sprite: menu_2; zextent: 139; }
+}
+spriteset(g_v2_0_0, "sprites/oriental-pearl/g_v2_0_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v2_0_0_low, "sprites/oriental-pearl/b_v2_0_0_low.png") {
+    [0, 0, 48, 119, -31, -96]
+}
+spriteset(b_v2_0_0_high, "sprites/oriental-pearl/b_v2_0_0_high.png") {
+    [0, 0, 20, 89, -10, -87]
+}
+spritelayout layout_v2_0_0 {
+    ground { sprite: g_v2_0_0; }
+    building { sprite: b_v2_0_0_low; zoffset: 0; zextent: 128; }
+    building { sprite: b_v2_0_0_high; zoffset: 127; zextent: 119; }
+}
+spriteset(g_v2_1_0, "sprites/oriental-pearl/g_v2_1_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v2_1_0_low, "sprites/oriental-pearl/b_v2_1_0_low.png") {
+    [0, 0, 28, 137, -1, -114]
+}
+spriteset(b_v2_1_0_high, "sprites/oriental-pearl/b_v2_1_0_high.png") {
+    [0, 0, 17, 81, 15, -66]
+}
+spritelayout layout_v2_1_0 {
+    ground { sprite: g_v2_1_0; }
+    building { sprite: b_v2_1_0_low; zoffset: 0; zextent: 128; }
+    building { sprite: b_v2_1_0_high; zoffset: 127; zextent: 82; }
+}
+spriteset(g_v2_0_1, "sprites/oriental-pearl/g_v2_0_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v2_0_1_low, "sprites/oriental-pearl/b_v2_0_1_low.png") {
+    [0, 0, 42, 135, -31, -112]
+}
+spriteset(b_v2_0_1_high, "sprites/oriental-pearl/b_v2_0_1_high.png") {
+    [0, 0, 17, 81, -32, -66]
+}
+spritelayout layout_v2_0_1 {
+    ground { sprite: g_v2_0_1; }
+    building { sprite: b_v2_0_1_low; zoffset: 0; zextent: 128; }
+    building { sprite: b_v2_0_1_high; zoffset: 127; zextent: 82; }
+}
+spriteset(g_v2_1_1, "sprites/oriental-pearl/g_v2_1_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v2_1_1_low, "sprites/oriental-pearl/b_v2_1_1_low.png") {
+    [0, 0, 34, 144, -17, -125]
+}
+spriteset(b_v2_1_1_high, "sprites/oriental-pearl/b_v2_1_1_high.png") {
+    [0, 0, 20, 61, -10, -57]
+}
+spritelayout layout_v2_1_1 {
+    ground { sprite: g_v2_1_1; }
+    building { sprite: b_v2_1_1_low; zoffset: 0; zextent: 128; }
+    building { sprite: b_v2_1_1_high; zoffset: 127; zextent: 58; }
+}
+switch (FEAT_OBJECTS, SELF, tile_view_2, relative_pos) {
+    relative_coord(0,0): layout_v2_0_0;
+    relative_coord(1,0): layout_v2_1_0;
+    relative_coord(0,1): layout_v2_0_1;
+    relative_coord(1,1): layout_v2_1_1;
+    layout_v2_0_0;
+}
+spriteset(menu_3, "sprites/oriental-pearl/purchase-view3.png") {
+    [0, 0, 63, 139, -32, -107]
+}
+spritelayout menu_layout_3 {
+    ground { sprite: 0; }
+    building { sprite: menu_3; zextent: 139; }
+}
+spriteset(g_v3_0_0, "sprites/oriental-pearl/g_v3_0_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v3_0_0_low, "sprites/oriental-pearl/b_v3_0_0_low.png") {
+    [0, 0, 30, 119, -13, -95]
+}
+spriteset(b_v3_0_0_high, "sprites/oriental-pearl/b_v3_0_0_high.png") {
+    [0, 0, 9, 52, 0, -50]
+}
+spritelayout layout_v3_0_0 {
+    ground { sprite: g_v3_0_0; }
+    building { sprite: b_v3_0_0_low; zoffset: 0; zextent: 126; }
+    building { sprite: b_v3_0_0_high; zoffset: 127; zextent: 82; }
+}
+spriteset(g_v3_1_0, "sprites/oriental-pearl/g_v3_1_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v3_1_0_low, "sprites/oriental-pearl/b_v3_1_0_low.png") {
+    [0, 0, 32, 140, -1, -111]
+}
+spriteset(b_v3_1_0_high, "sprites/oriental-pearl/b_v3_1_0_high.png") {
+    [0, 0, 17, 123, 15, -103]
+}
+spritelayout layout_v3_1_0 {
+    ground { sprite: g_v3_1_0; }
+    building { sprite: b_v3_1_0_low; zoffset: 0; zextent: 128; }
+    building { sprite: b_v3_1_0_high; zoffset: 127; zextent: 119; }
+}
+spriteset(g_v3_0_1, "sprites/oriental-pearl/g_v3_0_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v3_0_1_low, "sprites/oriental-pearl/b_v3_0_1_low.png") {
+    [0, 0, 41, 134, -31, -112]
+}
+spriteset(b_v3_0_1_high, "sprites/oriental-pearl/b_v3_0_1_high.png") {
+    [0, 0, 15, 61, -31, -43]
+}
+spritelayout layout_v3_0_1 {
+    ground { sprite: g_v3_0_1; }
+    building { sprite: b_v3_0_1_low; zoffset: 0; zextent: 128; }
+    building { sprite: b_v3_0_1_high; zoffset: 127; zextent: 58; }
+}
+spriteset(g_v3_1_1, "sprites/oriental-pearl/g_v3_1_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(b_v3_1_1_low, "sprites/oriental-pearl/b_v3_1_1_low.png") {
+    [0, 0, 48, 141, -30, -127]
+}
+spriteset(b_v3_1_1_high, "sprites/oriental-pearl/b_v3_1_1_high.png") {
+    [0, 0, 22, 85, -11, -81]
+}
+spritelayout layout_v3_1_1 {
+    ground { sprite: g_v3_1_1; }
+    building { sprite: b_v3_1_1_low; zoffset: 0; zextent: 128; }
+    building { sprite: b_v3_1_1_high; zoffset: 127; zextent: 82; }
+}
+switch (FEAT_OBJECTS, SELF, tile_view_3, relative_pos) {
+    relative_coord(0,0): layout_v3_0_0;
+    relative_coord(1,0): layout_v3_1_0;
+    relative_coord(0,1): layout_v3_0_1;
+    relative_coord(1,1): layout_v3_1_1;
+    layout_v3_0_0;
+}
+switch (FEAT_OBJECTS, SELF, world_graphics, view) {
+    0: tile_view_0;
+    1: tile_view_1;
+    2: tile_view_2;
+    tile_view_3;
+}
+switch (FEAT_OBJECTS, SELF, purchase_graphics, view) {
+    0: menu_layout_0;
+    1: menu_layout_1;
+    2: menu_layout_2;
+    menu_layout_3;
+}
+item (FEAT_OBJECTS, oriental_pearl, 1102) {
+    property {
+        class: "SHLM";
+        name: string(STR_OBJECT);
+        climates_available: ALL_CLIMATES;
+        size: [2,2];
+        build_cost_multiplier: 40;
+        remove_cost_multiplier: 20;
+        introduction_date: date(1995,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 31;
+        num_views: 4;
+    }
+    graphics {
+        default: world_graphics;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+        purchase: purchase_graphics;
+    }
+}

@@ -1,0 +1,249 @@
+spriteset(toh_menu_0, "sprites/temple-of-heaven/purchase0.png") {
+    [0, 0, 110, 88, -55, -44]
+}
+spritelayout toh_menu_layout_0 {
+    ground { sprite: 0; }
+    building { sprite: toh_menu_0; zextent: 88; }
+}
+spriteset(toh_g_v0_0_0, "sprites/temple-of-heaven/g_v0_0_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v0_0_0, "sprites/temple-of-heaven/b_v0_0_0.png") {
+    [0, 0, 22, 2, -11, -28]
+}
+spritelayout toh_layout_v0_0_0 {
+    ground { sprite: toh_g_v0_0_0; }
+    building { sprite: toh_b_v0_0_0; zextent: 53; }
+}
+spriteset(toh_g_v0_1_0, "sprites/temple-of-heaven/g_v0_1_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v0_1_0, "sprites/temple-of-heaven/b_v0_1_0.png") {
+    [0, 0, 43, 84, -11, -53]
+}
+spritelayout toh_layout_v0_1_0 {
+    ground { sprite: toh_g_v0_1_0; }
+    building { sprite: toh_b_v0_1_0; zextent: 69; }
+}
+spriteset(toh_g_v0_0_1, "sprites/temple-of-heaven/g_v0_0_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v0_0_1, "sprites/temple-of-heaven/b_v0_0_1.png") {
+    [0, 0, 43, 84, -32, -53]
+}
+spritelayout toh_layout_v0_0_1 {
+    ground { sprite: toh_g_v0_0_1; }
+    building { sprite: toh_b_v0_0_1; zextent: 69; }
+}
+spriteset(toh_g_v0_1_1, "sprites/temple-of-heaven/g_v0_1_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v0_1_1, "sprites/temple-of-heaven/b_v0_1_1.png") {
+    [0, 0, 62, 88, -31, -68]
+}
+spritelayout toh_layout_v0_1_1 {
+    ground { sprite: toh_g_v0_1_1; }
+    building { sprite: toh_b_v0_1_1; zextent: 69; }
+}
+switch (FEAT_OBJECTS, SELF, toh_tiles_0, relative_pos) {
+    relative_coord(0,0): toh_layout_v0_0_0;
+    relative_coord(1,0): toh_layout_v0_1_0;
+    relative_coord(0,1): toh_layout_v0_0_1;
+    relative_coord(1,1): toh_layout_v0_1_1;
+    toh_layout_v0_0_0;
+}
+spriteset(toh_menu_1, "sprites/temple-of-heaven/purchase1.png") {
+    [0, 0, 110, 88, -55, -44]
+}
+spritelayout toh_menu_layout_1 {
+    ground { sprite: 0; }
+    building { sprite: toh_menu_1; zextent: 88; }
+}
+spriteset(toh_g_v1_0_0, "sprites/temple-of-heaven/g_v1_0_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v1_0_0, "sprites/temple-of-heaven/b_v1_0_0.png") {
+    [0, 0, 36, 37, -11, -28]
+}
+spritelayout toh_layout_v1_0_0 {
+    ground { sprite: toh_g_v1_0_0; }
+    building { sprite: toh_b_v1_0_0; zextent: 53; }
+}
+spriteset(toh_g_v1_1_0, "sprites/temple-of-heaven/g_v1_1_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v1_1_0, "sprites/temple-of-heaven/b_v1_1_0.png") {
+    [0, 0, 43, 84, -11, -53]
+}
+spritelayout toh_layout_v1_1_0 {
+    ground { sprite: toh_g_v1_1_0; }
+    building { sprite: toh_b_v1_1_0; zextent: 69; }
+}
+spriteset(toh_g_v1_0_1, "sprites/temple-of-heaven/g_v1_0_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v1_0_1, "sprites/temple-of-heaven/b_v1_0_1.png") {
+    [0, 0, 43, 84, -32, -53]
+}
+spritelayout toh_layout_v1_0_1 {
+    ground { sprite: toh_g_v1_0_1; }
+    building { sprite: toh_b_v1_0_1; zextent: 69; }
+}
+spriteset(toh_g_v1_1_1, "sprites/temple-of-heaven/g_v1_1_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v1_1_1, "sprites/temple-of-heaven/b_v1_1_1.png") {
+    [0, 0, 62, 88, -31, -68]
+}
+spritelayout toh_layout_v1_1_1 {
+    ground { sprite: toh_g_v1_1_1; }
+    building { sprite: toh_b_v1_1_1; zextent: 69; }
+}
+switch (FEAT_OBJECTS, SELF, toh_tiles_1, relative_pos) {
+    relative_coord(0,0): toh_layout_v1_0_0;
+    relative_coord(1,0): toh_layout_v1_1_0;
+    relative_coord(0,1): toh_layout_v1_0_1;
+    relative_coord(1,1): toh_layout_v1_1_1;
+    toh_layout_v1_0_0;
+}
+spriteset(toh_menu_2, "sprites/temple-of-heaven/purchase2.png") {
+    [0, 0, 110, 88, -55, -44]
+}
+spritelayout toh_menu_layout_2 {
+    ground { sprite: 0; }
+    building { sprite: toh_menu_2; zextent: 88; }
+}
+spriteset(toh_g_v2_0_0, "sprites/temple-of-heaven/g_v2_0_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v2_0_0, "sprites/temple-of-heaven/b_v2_0_0.png") {
+    [0, 0, 36, 37, -25, -28]
+}
+spritelayout toh_layout_v2_0_0 {
+    ground { sprite: toh_g_v2_0_0; }
+    building { sprite: toh_b_v2_0_0; zextent: 53; }
+}
+spriteset(toh_g_v2_1_0, "sprites/temple-of-heaven/g_v2_1_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v2_1_0, "sprites/temple-of-heaven/b_v2_1_0.png") {
+    [0, 0, 43, 84, -11, -53]
+}
+spritelayout toh_layout_v2_1_0 {
+    ground { sprite: toh_g_v2_1_0; }
+    building { sprite: toh_b_v2_1_0; zextent: 69; }
+}
+spriteset(toh_g_v2_0_1, "sprites/temple-of-heaven/g_v2_0_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v2_0_1, "sprites/temple-of-heaven/b_v2_0_1.png") {
+    [0, 0, 43, 84, -32, -53]
+}
+spritelayout toh_layout_v2_0_1 {
+    ground { sprite: toh_g_v2_0_1; }
+    building { sprite: toh_b_v2_0_1; zextent: 69; }
+}
+spriteset(toh_g_v2_1_1, "sprites/temple-of-heaven/g_v2_1_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v2_1_1, "sprites/temple-of-heaven/b_v2_1_1.png") {
+    [0, 0, 62, 88, -31, -68]
+}
+spritelayout toh_layout_v2_1_1 {
+    ground { sprite: toh_g_v2_1_1; }
+    building { sprite: toh_b_v2_1_1; zextent: 69; }
+}
+switch (FEAT_OBJECTS, SELF, toh_tiles_2, relative_pos) {
+    relative_coord(0,0): toh_layout_v2_0_0;
+    relative_coord(1,0): toh_layout_v2_1_0;
+    relative_coord(0,1): toh_layout_v2_0_1;
+    relative_coord(1,1): toh_layout_v2_1_1;
+    toh_layout_v2_0_0;
+}
+spriteset(toh_menu_3, "sprites/temple-of-heaven/purchase3.png") {
+    [0, 0, 110, 88, -55, -44]
+}
+spritelayout toh_menu_layout_3 {
+    ground { sprite: 0; }
+    building { sprite: toh_menu_3; zextent: 88; }
+}
+spriteset(toh_g_v3_0_0, "sprites/temple-of-heaven/g_v3_0_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v3_0_0, "sprites/temple-of-heaven/b_v3_0_0.png") {
+    [0, 0, 22, 2, -11, -28]
+}
+spritelayout toh_layout_v3_0_0 {
+    ground { sprite: toh_g_v3_0_0; }
+    building { sprite: toh_b_v3_0_0; zextent: 53; }
+}
+spriteset(toh_g_v3_1_0, "sprites/temple-of-heaven/g_v3_1_0.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v3_1_0, "sprites/temple-of-heaven/b_v3_1_0.png") {
+    [0, 0, 43, 84, -11, -53]
+}
+spritelayout toh_layout_v3_1_0 {
+    ground { sprite: toh_g_v3_1_0; }
+    building { sprite: toh_b_v3_1_0; zextent: 69; }
+}
+spriteset(toh_g_v3_0_1, "sprites/temple-of-heaven/g_v3_0_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v3_0_1, "sprites/temple-of-heaven/b_v3_0_1.png") {
+    [0, 0, 43, 84, -32, -53]
+}
+spritelayout toh_layout_v3_0_1 {
+    ground { sprite: toh_g_v3_0_1; }
+    building { sprite: toh_b_v3_0_1; zextent: 69; }
+}
+spriteset(toh_g_v3_1_1, "sprites/temple-of-heaven/g_v3_1_1.png") {
+    [0, 0, 62, 32, -31, 0]
+}
+spriteset(toh_b_v3_1_1, "sprites/temple-of-heaven/b_v3_1_1.png") {
+    [0, 0, 62, 88, -31, -68]
+}
+spritelayout toh_layout_v3_1_1 {
+    ground { sprite: toh_g_v3_1_1; }
+    building { sprite: toh_b_v3_1_1; zextent: 69; }
+}
+switch (FEAT_OBJECTS, SELF, toh_tiles_3, relative_pos) {
+    relative_coord(0,0): toh_layout_v3_0_0;
+    relative_coord(1,0): toh_layout_v3_1_0;
+    relative_coord(0,1): toh_layout_v3_0_1;
+    relative_coord(1,1): toh_layout_v3_1_1;
+    toh_layout_v3_0_0;
+}
+switch (FEAT_OBJECTS, SELF, toh_world, view) {
+    0: toh_tiles_0;
+    1: toh_tiles_1;
+    2: toh_tiles_2;
+    toh_tiles_3;
+}
+switch (FEAT_OBJECTS, SELF, toh_purchase, view) {
+    0: toh_menu_layout_0;
+    1: toh_menu_layout_1;
+    2: toh_menu_layout_2;
+    toh_menu_layout_3;
+}
+item (FEAT_OBJECTS, temple_of_heaven, 1104) {
+    property {
+        class: "SHLM";
+        name: string(STR_TEMPLE_OF_HEAVEN);
+        climates_available: ALL_CLIMATES;
+        size: [2,2];
+        build_cost_multiplier: 48;
+        remove_cost_multiplier: 24;
+        introduction_date: date(1751,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 9;
+        num_views: 4;
+    }
+    graphics {
+        default: toh_world;
+        purchase: toh_purchase;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}

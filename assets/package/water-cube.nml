@@ -1,0 +1,33 @@
+switch (FEAT_OBJECTS, SELF, wc_world, view) {
+    0: wc_tiles_0;
+    1: wc_tiles_1;
+    2: wc_tiles_2;
+    wc_tiles_3;
+}
+switch (FEAT_OBJECTS, SELF, wc_purchase, view) {
+    0: wc_menu_layout_0;
+    1: wc_menu_layout_1;
+    2: wc_menu_layout_2;
+    wc_menu_layout_3;
+}
+item (FEAT_OBJECTS, water_cube, 1105) {
+    property {
+        class: "SHLM";
+        name: string(STR_WATER_CUBE);
+        climates_available: ALL_CLIMATES;
+        size: [4,4];
+        build_cost_multiplier: 64;
+        remove_cost_multiplier: 32;
+        introduction_date: date(2008,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 4;
+        num_views: 4;
+    }
+    graphics {
+        default: wc_world;
+        purchase: wc_purchase;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}

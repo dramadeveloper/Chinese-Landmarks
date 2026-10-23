@@ -1,0 +1,96 @@
+中国地标 0.1.0 — Source build
+
+Requirements
+Python 3.12 or newer. Install the dependencies in requirements.txt:
+
+    python -m pip install -r requirements.txt
+
+The nmlc executable (NML 0.7.5) must be on PATH. Python dependencies are
+NumPy >=2,<3 and Pillow >=10.2,<13; no compiler or runtime is bundled here.
+
+Build
+Run from the extracted source root:
+
+    python -B assets/chinese-landmarks/render_assets.py --no-comparison --compile
+
+Result: build/current/grf/oriental-pearl.grf
+The build renders the saved models and plaza types, writes the
+indexed sprites and merged NML, checks palette/sprite reconstruction, and
+compiles the GRF. It does not install or publish the result.
+
+--no-comparison skips the labelled comparison board; this build needs no
+font files. Omitting it also creates comparison boards and requires the
+Windows font C:/Windows/Fonts/msyh.ttc. The separate Water Cube preview
+entry point also uses that font. Font files are not included.
+Do not add --verify-existing to this source build: its optional baseline
+inputs are not part of the source distribution.
+
+Model editing
+assets/models/<name>/model.npz contains editable uint8 material arrays,
+indexed as [x, y, z], with 0 meaning empty. The model container determines
+the footprint. The normal build reads these arrays; it does not regenerate
+them from the geometric construction functions.
+
+The following functions construct the six procedural models:
+
+  folder                module                 function
+  water-cube            water_cube_model       make_building
+  xian-bell-tower        xian_bell_tower_model   make_building
+  canton-tower          canton_tower_model     make_model
+  xinghai-square        xinghai_model          make_model_array
+  yellow-crane-tower    tower_model            make_model
+  gate-to-the-east      gate_model             make_model
+
+To regenerate one of them after editing its geometry, run this Python
+code from the source root (change the three named values using the table):
+
+    from pathlib import Path
+    import importlib
+    import sys
+    import numpy as np
+
+    folder = 'water-cube'
+    module_name = 'water_cube_model'
+    function_name = 'make_building'
+    source = Path('assets/models') / folder
+    sys.path.insert(0, str(Path('assets/chinese-landmarks').resolve()))
+    sys.path.insert(0, str(source.resolve()))
+    module = importlib.import_module(module_name)
+    model = getattr(module, function_name)()
+    np.savez_compressed(source / 'model.npz', model=model)
+
+Run the normal build again to render the updated saved model.
+
+The oriental-pearl, tiananmen and temple-of-heaven models are edited
+directly as arrays. Preserve every named array when saving; Oriental Pearl
+uses both 'model' and 'core'. For example, load/copy/edit/save with:
+
+    from pathlib import Path
+    import numpy as np
+
+    path = Path('assets/models/oriental-pearl/model.npz')
+    with np.load(path) as saved:
+        arrays = {key: saved[key].copy() for key in saved.files}
+    # Edit arrays['model']; update arrays['core'] where needed for normals.
+    np.savez_compressed(path, **arrays)
+
+Their geometry.json files describe the authoring coordinates used for
+surface normals. Keep these aligned with geometry changes; their size and
+layout fields are not the current model container or game footprint.
+renderer.py supplies material ramps and surface processing for each model.
+
+Shared geometry and rendering
+assets/chinese-landmarks/export_plaza.py: people, furniture and plaza types.
+assets/chinese-landmarks/plaza_material.py: common paving and DOS palette.
+assets/chinese-landmarks/render_core.py: projection, lighting and shadows.
+assets/chinese-landmarks/sprite_pipeline.py: tile slicing and compilation.
+assets/chinese-landmarks/render_assets.py: whole-package build entry point.
+assets/package/: NML object definitions, IDs and language strings.
+
+Project version: 0.1.0. GRFID: OPRL.
+The GRF version field stores an integer. The project encodes versions as
+(major << 16) | (minor << 8) | patch, so 0.1.0 is 0x000100 (256).
+This value is compiled into the GRF itself. The minimum compatible value
+remains 14 to preserve compatibility with the same object IDs in v14;
+versions 13 and earlier use incompatible IDs.
+See LICENSE for the GPL v2 terms.
