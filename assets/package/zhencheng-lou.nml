@@ -1,0 +1,33 @@
+switch (FEAT_OBJECTS, SELF, zcl_world, view) {
+    0: zcl_tiles_0;
+    1: zcl_tiles_1;
+    2: zcl_tiles_2;
+    zcl_tiles_3;
+}
+switch (FEAT_OBJECTS, SELF, zcl_purchase, view) {
+    0: zcl_menu_layout_0;
+    1: zcl_menu_layout_1;
+    2: zcl_menu_layout_2;
+    zcl_menu_layout_3;
+}
+item (FEAT_OBJECTS, zhencheng_lou, 1112) {
+    property {
+        class: "SHLM";
+        name: string(STR_ZHENCHENG_LOU);
+        climates_available: ALL_CLIMATES;
+        size: [4,4];
+        build_cost_multiplier: 48;
+        remove_cost_multiplier: 24;
+        introduction_date: date(1912,1,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 3;
+        num_views: 4;
+    }
+    graphics {
+        default: zcl_world;
+        purchase: zcl_purchase;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}

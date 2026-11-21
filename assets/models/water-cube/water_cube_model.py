@@ -142,3 +142,7 @@ def make_building():
         mask = person != 0
         target[mask] = person[mask] + PROP_OFFSET
     return model
+
+
+if __name__ == '__main__':
+    np.savez_compressed(Path(__file__).with_name('model.npz'), model=make_building())

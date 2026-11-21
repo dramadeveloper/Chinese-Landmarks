@@ -1,94 +1,112 @@
-"""Oriental Pearl surface adapter; projection and lighting live in render_core."""
+"""Daylight materials for the 3×3 tower, using the common projection and lighting."""
 from pathlib import Path
-import json, math, sys
+import sys
+
 import numpy as np
-ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(ROOT.parents[1] / 'chinese-landmarks'))
-from plaza_material import paving
-from render_core import trace_model, shade, indexed, finish, DEFAULT_SCENE, PEARL_SAMPLING
-W, H = 192, 336
-ORIGIN = (96, 240)
 
-def render(model, view, *, core, factor=1.3, lighting=DEFAULT_SCENE):
-    """Pixel-centre orthographic export, material ramps and direct-light shadows."""
-    frame = trace_model(model, view, (W, H), ORIGIN, PEARL_SAMPLING)
-    acore = np.rot90(core, view, axes=(0, 1))
-    point, xyz, hit, mat = frame.point, frame.xyz, frame.hit, frame.mat
-    normal = frame.normal
-    gx, gy, gm = frame.gx, frame.gy, frame.gm
-    gi, gj, gmat = frame.gi, frame.gj, frame.gmat
-    geometry=json.loads((ROOT/'geometry.json').read_text())
-    # Inverse geometry transform for attached normals/panels only.
-    # Map the translated 80x80 cropped model back to the 160x160 source
-    # in each rotated frame. This preserves all existing analytic normals.
-    crop_offsets = [(40,40,0)] * 4
-    shape_point = (point + crop_offsets[view] - [80,80,0]) / factor + [80,80,0]
-    core_hit = hit & (acore[xyz[:,:,0],xyz[:,:,1],xyz[:,:,2]] != 0)
-    def rotate(x,y):
-        for _ in range(view): x,y=159-y,x
-        return x,y
-    # Cylindrical tubes, including continuous inclined struts.
-    for j,(cx0,cy0) in enumerate(geometry['columns']):
-        cx,cy=rotate(cx0,cy0)
-        d=shape_point-[cx+.5,cy+.5,0]
-        length=np.linalg.norm(d[:,:,:2],axis=2)
-        m=core_hit&(mat==1)&(length<3.3)&(shape_point[:,:,2]<143)
-        radial=d.copy(); radial[:,:,2]=0
-        radial/=np.maximum(length[:,:,None],.01)
-        normal[m]=radial[m]
-        deg=[90,210,330][j]*math.pi/180
-        fx0,fy0=80+round(25*math.cos(deg)),80+round(25*math.sin(deg))
-        fx,fy=rotate(fx0,fy0)
-        start=np.array([fx+.5,fy+.5,3.5])
-        axis=np.array([cx-fx,cy-fy,34.])
-        t=np.clip(((shape_point-start)*axis).sum(axis=2)/(axis@axis),0,1)
-        radial=shape_point-(start+t[:,:,None]*axis)
-        length=np.linalg.norm(radial,axis=2)
-        m=core_hit&(mat==1)&(length<3.3)&(shape_point[:,:,2]<39)
-        normal[m]=(radial/np.maximum(length[:,:,None],.01))[m]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import pearl_model as tower
+from export_plaza import RAMPS as PEOPLE_RAMPS
+from render_core import DEFAULT_SCENE, finish, indexed, shade, stone_ground, trace_model
 
-    pearl_regions=[]
-    for pearl in geometry['pearls']:
-        cx,cy,cz=pearl['center']; cx,cy=rotate(cx,cy)
-        r,rz=pearl['r'],pearl['rz']
-        d=shape_point-[cx+.5,cy+.5,cz+.5]
-        distance=(d[:,:,0]**2+d[:,:,1]**2)/(r+.9)**2+d[:,:,2]**2/(rz+.9)**2
-        m=core_hit&(distance<=1.15)
-        radial=d/np.array([r*r,r*r,rz*rz])
-        radial/=np.maximum(np.linalg.norm(radial,axis=2)[:,:,None],.01)
-        normal[m]=radial[m]
-        phi=np.arctan2(d[:,:,1],d[:,:,0])-view*math.pi/2
-        lat=np.arcsin(np.clip(d[:,:,2]/(rz+.5),-1,1))
-        pearl_regions.append((m,phi,lat))
-    light = shade(normal, frame.shadow, lighting.pearl)
-    paint=mat.copy()
-    for region,phi,lat in pearl_regions:
-        # Surface-attached diagonal panel joints and narrow window mullions.
-        phase1=(phi*8/math.pi+lat*7/math.pi)%1
-        phase2=(phi*8/math.pi-lat*7/math.pi)%1
-        seam=region&(mat==2)&((phase1<.10)|(phase2<.10))
-        light[seam]+= .12
-        mullion=region&(mat==3)&((phi*14/math.pi)%1<.14)
-        paint[mullion]=6; light[mullion]=.70
-    # Small pixel clusters on foliage; no generic image-wide noise.
-    grain=((xyz[:,:,0]*17+xyz[:,:,1]*29+xyz[:,:,2]*11)%13-6)/65
-    leaf=(mat==4)|(mat==7)
-    light[leaf]+=grain[leaf]
-    lamp=mat==10
-    light[lamp]=1
-    # Deliberate material-specific TTD ramps.
-    ramps={1:[3,5,7,9,11,13,14],2:[40,42,43,44,45,46,48],
-           3:[1,16,17,18,19,20],4:[88,89,90,91,92,93],
-           5:[4,5,6,7,8,9,10],6:[16,17,18,19,20,21,22,23],
-           7:[88,89,90,91,92,93,94],8:[32,33,34,35,36,37],
-           9:[40,41,42,43,44],10:[13],11:[32,33,34,35]}
-    building = indexed(paint, light, hit, ramps)
-    gshadow = frame.gshadow
-    pattern=(((gi//2)*17+(gj//2)*31)%19-9)/240
-    glight=np.full((H,W),.72)+pattern
-    glight[(gmat==7)|(gmat==4)]=.58+pattern[(gmat==7)|(gmat==4)]*2
-    glight[gshadow]-=lighting.ground_darkening
-    ground=indexed(gmat,glight,gm,ramps)
-    paved = gm & ((gmat==5)|(gmat==8))
-    ground[paved] = paving(gx,gy,gshadow,shadow_colors=lighting.paving_shadow)[paved]
-    return finish(frame, ground, building)
+RAMPS = {
+    tower.STONE: [5, 7, 9, 10, 11, 12], tower.STEP: [6, 8, 10, 11, 12, 13],
+    tower.ROOF: [17, 19, 20, 21, 22, 23, 14], tower.WINDOW: [16, 154, 156, 158, 159],
+    tower.FRAME: [5, 8, 10, 12, 14], tower.PLANT: [88, 89, 90, 91, 92, 93],
+    tower.COLUMN: [5, 7, 9, 10, 12, 13, 14], tower.BRACE: [5, 7, 9, 10, 12, 13, 14],
+    tower.PEARL: [40, 41, 42, 43, 44, 45, 46, 47],
+    tower.SILVER: [16, 17, 18, 19, 20, 21, 22, 23],
+    tower.GLASS_SHADE: [40, 41, 42, 43, 44, 45, 46],
+    tower.LOBBY_ROOF: [17, 18, 19, 20, 21, 22, 23], tower.DOOR: [1, 16, 17, 154, 156],
+    tower.HOTEL_GLASS: [1, 16, 17, 154, 156, 19], tower.HOTEL_BAND: [40, 42, 43, 44, 45],
+    tower.GALLERY: [16, 18, 19, 20, 21, 22, 23],
+    tower.OBSERVATION_RIM: [17, 18, 126, 127, 21, 22],
+    tower.BELT: [16, 17, 18, 19, 20, 21], tower.HOTEL: [17, 19, 20, 21, 22, 23],
+    tower.HUB: [16, 17, 18, 19, 20, 21, 22], tower.AERIAL: [5, 8, 10, 12, 14],
+    tower.IDENT_RED: [41, 43, 44, 162, 165], tower.BEAM: [4, 6, 8, 10, 11, 12],
+    tower.RIB: [17, 18, 19, 20, 21, 22], tower.CAP_GLASS: [16, 17, 18, 19, 20, 21],
+    **{tower.PEOPLE+k: ramp for k, ramp in PEOPLE_RAMPS.items()},
+}
+
+
+def render(model, view, *, lighting=DEFAULT_SCENE):
+    frame = trace_model(model, view, (206, 314), (103, 207))
+    hit = frame.hit
+    # Return surface samples to author coordinates so panel joints rotate with the tower.
+    p = (frame.point[hit]-[tower.CENTER, tower.CENTER, 1])/tower.U
+    quarter = np.array([[0, -1], [1, 0]])
+    rotation = np.linalg.matrix_power(quarter, view)
+    p[:, :2] = p[:, :2] @ rotation
+    m = frame.mat[hit].copy()
+    normal = frame.normal[hit].copy()
+    normal[:, :2] = normal[:, :2] @ rotation
+    detail = np.zeros(len(m))
+
+    def curved(mask, radial):
+        v = radial[mask]
+        normal[mask] = v / np.linalg.norm(v, axis=1)[:, None]
+
+    for cx, cy in tower.COLUMNS:
+        radial = p - [cx, cy, 0]
+        radial[:, 2] = 0
+        curved((m == tower.COLUMN) & (np.linalg.norm(radial, axis=1) < 7.2), radial)
+    for direction in tower.BRACE_DIRS:
+        foot = np.r_[tower.COLUMN_SHIFT+tower.FOOT_R*direction, 0]
+        axis = np.r_[(tower.JOIN_R-tower.FOOT_R)*direction, 93]
+        rel = p-foot
+        radial = rel - ((rel @ axis)/(axis @ axis))[:, None]*axis
+        curved((m == tower.BRACE) & (np.linalg.norm(radial, axis=1) < 6.5), radial)
+
+    radial = p.copy()
+    radial[:, 2] = 0
+    curved(m == tower.HUB, radial)
+    # Smooth the sloping lobby roof and terraces where exposed voxel steps
+    # would break the circular bands into alternating bright and dark pixels.
+    ix, iy, iz = frame.xyz[hit].T
+    exposed = frame.model[ix, iy, iz+1] == 0
+    for material, slope in [(tower.LOBBY_ROOF, .5), (tower.PLANT, .18),
+                            (tower.STEP, .30), (tower.ROOF, .08), (tower.STONE, .04)]:
+        mask = (m == material) & exposed
+        v = radial[mask].copy()
+        v[:, 2] = np.maximum(np.hypot(v[:, 0], v[:, 1]), 1)/slope
+        normal[mask] = v/np.linalg.norm(v, axis=1)[:, None]
+
+    globe = np.isin(m, (tower.PEARL, tower.GLASS_SHADE, tower.SILVER, tower.BELT, tower.OBSERVATION_RIM,
+                        tower.HOTEL, tower.HOTEL_GLASS, tower.HOTEL_BAND, tower.CAP_GLASS))
+    for cx, cy, cz, r in tower.MAIN_BALLS + tower.HOTELS + tower.BRACE_BALLS:
+        radial = p-[cx, cy, cz]
+        mask = globe & (np.linalg.norm(radial, axis=1) < r+2)
+        if cz == 272.5:
+            # Sample the circular gallery on the sphere itself. The voxel hit
+            # still supplies its silhouette, occlusion, shadow and tile owner.
+            ray = np.r_[np.array([1, 1]) @ rotation, 1]/np.sqrt(3)
+            nearest = radial[mask] - (radial[mask] @ ray)[:, None]*ray
+            depth = np.sqrt(np.maximum(0, r*r-np.sum(nearest**2, axis=1)))
+            radial[mask] = nearest+depth[:, None]*ray
+            m[mask] = tower.upper_glazing(radial[mask, 2]/r)
+        curved(mask, radial)
+        if r < 20:
+            continue
+        longitude = np.arctan2(radial[:, 1], radial[:, 0])/(2*np.pi)
+        lat = np.arcsin(np.clip(radial[:, 2]/r, -1, 1))
+        panel = ((m == tower.PEARL) | (m == tower.GLASS_SHADE)) & mask
+        # Two mesh diagonals per pane, with a broad value change around the latitude.
+        u, v = longitude*14, lat*1.85
+        seam = np.minimum((u+v)%1, (u-v)%1) < .15
+        detail[panel & seam] += .065
+        detail[panel & ((np.floor(u+v)+np.floor(u-v)) % 2 == 0)] -= .04
+        mullion = mask & (m == tower.BELT) & ((longitude*24)%1 < .21)
+        m[mullion] = tower.FRAME
+        if cz == 93:
+            # Small portholes are punched around the silver cap above the rose glazing.
+            ports = mask & (m == tower.SILVER) & (abs(radial[:, 2]/r-.55)<.066)
+            m[ports & ((longitude*18)%1 < .34)] = tower.BELT
+
+    normal[:, :2] = normal[:, :2] @ rotation.T
+    frame.normal[hit] = normal
+    paint = frame.mat.copy()
+    paint[hit] = m
+    light = shade(frame.normal, frame.shadow, lighting.standard)
+    light[hit] += detail
+    building = indexed(paint, light, hit, RAMPS)
+    return finish(frame, stone_ground(frame, lighting), building)

@@ -1,5 +1,11 @@
 """Canton Tower: a ruled, eccentric elliptical lattice, in model units."""
+from pathlib import Path
+import sys
+
 import numpy as np
+
+if __name__ == '__main__':
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'chinese-landmarks'))
 
 # Match the current Pearl's measured 307 u / 468 m total-height scale.
 UNITS_PER_METRE = 307 / 468
@@ -146,3 +152,7 @@ def make_model():
     occupied = people != 0
     target[occupied] = people[occupied] + PROP_OFFSET
     return model
+
+
+if __name__ == '__main__':
+    np.savez_compressed(Path(__file__).with_name('model.npz'), model=make_model())

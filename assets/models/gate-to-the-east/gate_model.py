@@ -1,5 +1,11 @@
 """Built Gate to the East: photo-estimated envelope, documented metric anchors."""
+from pathlib import Path
+import sys
+
 import numpy as np
+if __name__ == '__main__':
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'chinese-landmarks'))
+
 from export_plaza import make_model as make_prop
 
 SIZE = (160, 120, 244)
@@ -81,3 +87,7 @@ def make_model():
     turned[valid] = a[ix[valid],iy[valid]]
     turned[:,:,0] = PAVING
     return turned
+
+
+if __name__ == '__main__':
+    np.savez_compressed(Path(__file__).with_name('model.npz'), model=make_model())

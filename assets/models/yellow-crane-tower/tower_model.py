@@ -3,7 +3,13 @@
 Storey widths/heights follow Huanghelou Cangsang chapter 9. Roof projections,
 terrace and opening layout are photo estimates, not survey dimensions.
 """
+from pathlib import Path
+import sys
+
 import numpy as np
+if __name__ == '__main__':
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'chinese-landmarks'))
+
 from export_plaza import make_model as make_prop
 
 SIZE, HEIGHT = 120, 128
@@ -195,3 +201,7 @@ def make_model(art_scale=ART_SCALE):
         target = a[px:px+3,py:py+2,1:6]
         target[person!=0] = person[person!=0]+PROP_OFFSET
     return a
+
+
+if __name__ == '__main__':
+    np.savez_compressed(Path(__file__).with_name('model.npz'), model=make_model())

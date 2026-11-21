@@ -19,7 +19,6 @@ class Lighting:
 
 # Model-specific lighting preserves the existing pixels. New models use STANDARD.
 STANDARD = Lighting(.33, .67, .25)
-PEARL_EXISTING = Lighting(.28, .72, .22)
 PALE_STONE_EXISTING = Lighting(.50, .50, .70)
 
 
@@ -27,7 +26,6 @@ PALE_STONE_EXISTING = Lighting(.50, .50, .70)
 class SceneLighting:
     """One explicit lighting choice shared by all landmarks, props and paving."""
     standard: Lighting
-    pearl: Lighting
     pale_stone: Lighting
     ground_darkening: float
     paving_shadow: tuple
@@ -35,7 +33,7 @@ class SceneLighting:
 
 # Shared lighting configuration for the current models.
 DEFAULT_SCENE = SceneLighting(
-    STANDARD, PEARL_EXISTING, PALE_STONE_EXISTING, .30, (SHADOW, SHADOW_JOINT))
+    STANDARD, PALE_STONE_EXISTING, .30, (SHADOW, SHADOW_JOINT))
 
 
 @dataclass(frozen=True)
@@ -49,7 +47,6 @@ class Sampling:
 
 
 DEFAULT_SAMPLING = Sampling()
-PEARL_SAMPLING = Sampling(3, .05, 1.25, .75)
 PROP_SAMPLING = Sampling(self_shadow=False)
 
 

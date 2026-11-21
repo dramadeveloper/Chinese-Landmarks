@@ -12,7 +12,7 @@ ROOT = SOURCE.parents[2]
 OUT = ROOT / 'build/current/water-cube'
 sys.path.insert(0, str(SOURCE))
 sys.path.insert(0, str(ROOT / 'assets/chinese-landmarks'))
-from water_cube_model import (make_building, cushions, PANELS, LOW, HIGH, BASE, TOP,
+from water_cube_model import (cushions, PANELS, LOW, HIGH, BASE, TOP,
                    MEMBRANE, ROOF, JOINT, STONE, GLASS, METAL, VENT, WATER,
                    COPING, PROP_OFFSET)
 from render_core import (trace_model, shade, indexed, stone_ground, finish,
@@ -20,8 +20,9 @@ from render_core import (trace_model, shade, indexed, stone_ground, finish,
 from plaza_material import PALETTE, SCALE, save_p, validate_png, paving
 from sprite_pipeline import save_render, export_tiles
 from voxel_io import native_vox
-from render_assets import CURRENT, adapter
-from export_plaza import make_model, render as render_prop, RAMPS as PROP_RAMPS
+from render_assets import native_picture
+from preview_landmark import compare_landmarks
+from export_plaza import RAMPS as PROP_RAMPS
 
 # Materials are selected before geometry. These are all static, safe DOS colors.
 ETFE = [147, 148, 149, 150, 151, 152, 153, 153]
@@ -160,40 +161,10 @@ def previews(results):
 
 
 def comparison(result):
-    board = Image.new('RGB', (1220, 520), BG)
-    draw = ImageDraw.Draw(board)
-    draw.text((24, 15), '同倍率体量比较  /  全部原生 1×', font=font(23), fill=INK)
-    draw.text((25, 54), '水立方为 4×4 模型；立面单独加高约 39%，人物使用公共尺寸。', font=font(15), fill=MUTED)
-    evidence = []
-    # Align map-ground centres instead of independently fitting the objects.
-    for asset, screen_x, label in zip(CURRENT, [100, 385, 650], ['东方明珠', '天安门', '天坛']):
-        path = ROOT/'assets'/asset.source/asset.model
-        with np.load(path) as data:
-            inputs = {key: data[key] for key in asset.model_keys}
-        arrays = adapter(asset).render(view=0, **inputs)
-        picture = rgba(arrays[4])
-        bounds = picture.getbbox()
-        picture = picture.crop(bounds)
-        ox, oy = arrays[7]
-        nx, ny = arrays[8]
-        anchor = (ox+16*(ny-nx)-bounds[0], oy+8*(nx+ny)-bounds[1])
-        board.paste(picture, (round(screen_x-anchor[0]), round(340-anchor[1])), picture)
-        draw.text((screen_x-38, 462), label, font=font(15), fill=MUTED)
-        evidence.append(dict(name=asset.name, model_sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
-        print(f'Comparison: {asset.name}', flush=True)
-    pic = rgba(result[4])
-    bounds = pic.getbbox()
-    pic = pic.crop(bounds)
-    board.paste(pic, (int(878-(result[7][0]-bounds[0])), int(340-(result[7][1]+64-bounds[1]))), pic)
-    draw.text((821, 462), '水立方', font=font(15), fill=ACCENT)
-    for index, kind in enumerate(['walkers', 'bench', 'tree']):
-        ground, building = render_prop(make_model(kind), kind, 0)
-        pic = cropped(np.where(building != 0, building, ground))
-        board.paste(pic, (1030+index*57, 358-pic.height), pic)
-    draw.text((1030, 462), '公共人物与街具', font=font(14), fill=MUTED)
-    draw.text((25, 494), '同一地块中心基线 · 原生精灵离线预览', font=font(13), fill=MUTED)
-    board.save(OUT/'comparison-1x.png')
-    return evidence
+    picture = native_picture(result[4], result[7], result[8])
+    references = ('oriental-pearl', 'tiananmen', 'temple-of-heaven')
+    evidence = compare_landmarks(SOURCE.name, picture, references, OUT / 'comparison-1x.png')
+    return [dict(name=item['name'], model_sha256=item['sha256']) for item in evidence]
 
 
 def main():
@@ -201,8 +172,8 @@ def main():
     parser.add_argument('--preview-only', action='store_true')
     args = parser.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
-    model = make_building()
-    np.savez_compressed(SOURCE/'model.npz', model=model)
+    with np.load(SOURCE / 'model.npz') as saved:
+        model = saved['model']
     xyz = np.argwhere(model != 0)
     voxels = np.column_stack((xyz, model[tuple(xyz.T)])).astype(np.uint8)
     palette = np.zeros((256, 4), np.uint8)

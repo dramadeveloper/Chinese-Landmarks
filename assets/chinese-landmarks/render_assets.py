@@ -9,7 +9,7 @@ import re
 import shutil
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
-from plaza_material import save_p, validate_png
+from plaza_material import PALETTE, save_p, validate_png
 from sprite_pipeline import (RESULT_KEYS, crop, save_render, write_sprite, export_tiles,
                              purchase_pixels, compile_grf)
 import export_plaza
@@ -20,9 +20,6 @@ ASSETS = ROOT.parent
 PACKAGE_SOURCE = ASSETS / 'package'
 REFERENCE = ASSETS / 'reference'
 DEFAULT_OUTPUT = ASSETS.parent / 'build/current'
-FRAGMENTS = ('grf.nml', 'plaza.nml', 'oriental-pearl-object.nml',
-             'tiananmen.nml', 'temple-of-heaven.nml', 'water-cube.nml', 'xian-bell-tower.nml', 'canton-tower.nml',
-             'xinghai-square.nml', 'yellow-crane-tower.nml', 'gate-to-the-east.nml')
 
 
 @dataclass(frozen=True)
@@ -52,8 +49,8 @@ class Asset:
 CURRENT = (
     Asset('pearl', 'models/oriental-pearl', 'model.npz',
           'oriental-pearl', '', 'tile_view', 'oriental-pearl-object.nml',
-          'world_graphics', (('low', 3, 160, 0), ('high', 160, 312, 127)), ('model', 'core'),
-          Menu(scale=.5, baseline=32, filename='purchase-view{view}.png')),
+          'world_graphics', (('low', 1, 160, 0), ('high', 160, 310, 127)),
+          menu=Menu(scale=.5, baseline=32, filename='purchase-view{view}.png')),
     Asset('tiananmen', 'models/tiananmen', 'model.npz',
           'tiananmen', 'tam_', 'tam_tiles', 'tiananmen.nml', 'tam_world',
           menu=Menu(allow_upscale=True)),
@@ -73,6 +70,14 @@ CURRENT = (
           'yellow-crane-tower', 'yct_', 'yct_tiles', 'yellow-crane-tower.nml', 'yct_world'),
     Asset('gate-to-the-east', 'models/gate-to-the-east', 'model.npz',
           'gate-to-the-east', 'gte_', 'gte_tiles', 'gate-to-the-east.nml', 'gte_world'),
+    Asset('china-art-museum', 'models/china-art-museum', 'model.npz',
+          'china-art-museum', 'cam_', 'cam_tiles', 'china-art-museum.nml', 'cam_world'),
+    Asset('zhencheng-lou', 'models/zhencheng-lou', 'model.npz',
+          'zhencheng-lou', 'zcl_', 'zcl_tiles', 'zhencheng-lou.nml', 'zcl_world'),
+    Asset('harbin-saint-sophia', 'models/harbin-saint-sophia', 'model.npz',
+          'harbin-saint-sophia', 'sophia_', 'sophia_tiles', 'harbin-saint-sophia.nml', 'sophia_world'),
+    Asset('beijing-national-stadium', 'models/beijing-national-stadium', 'model.npz',
+          'beijing-national-stadium', 'bns_', 'bns_tiles', 'beijing-national-stadium.nml', 'bns_world'),
 )
 
 
@@ -93,7 +98,11 @@ def package_metadata():
 
 
 def adapter(asset):
-    spec = importlib.util.spec_from_file_location('current_' + asset.name, ASSETS / asset.source / 'renderer.py')
+    return load_renderer(ASSETS / asset.source)
+
+
+def load_renderer(source):
+    spec = importlib.util.spec_from_file_location('current_' + source.name, source / 'renderer.py')
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -102,11 +111,12 @@ def adapter(asset):
 def copy_package(output):
     package = output / 'grf'
     package.mkdir(parents=True, exist_ok=True)
-    for name in FRAGMENTS:
+    fragments = ['grf.nml', 'plaza.nml', *(asset.fragment for asset in CURRENT)]
+    for name in fragments:
         shutil.copy2(PACKAGE_SOURCE / name, package / name)
     shutil.copytree(PACKAGE_SOURCE / 'lang', package / 'lang', dirs_exist_ok=True)
     shutil.copy2(PACKAGE_SOURCE / 'LICENSE', package / 'LICENSE')
-    combined = '\n\n'.join((package / name).read_text(encoding='utf-8-sig') for name in FRAGMENTS)
+    combined = '\n\n'.join((package / name).read_text(encoding='utf-8-sig') for name in fragments)
     (package / 'oriental-pearl.nml').write_text(combined, encoding='utf-8')
     return package
 
@@ -239,21 +249,53 @@ def render_plaza(output, package, verify, lighting=DEFAULT_SCENE):
     return dict(name='plaza', views=17, existing_arrays_checked=checked)
 
 
-def comparison_board(output):
-    board = Image.new('RGB', (2480, 490), '#202a33')
+def landmark_titles():
+    language = (PACKAGE_SOURCE / 'lang/simplified_chinese.lng').read_text(encoding='utf-8-sig')
+    labels = dict(re.findall(r'^(STR_\w+)\s*:(.*)$', language, re.M))
+    titles = {}
+    for asset in CURRENT:
+        definition = (PACKAGE_SOURCE / asset.fragment).read_text(encoding='utf-8-sig')
+        key = re.search(r'\bname:\s*string\((\w+)\)', definition).group(1)
+        titles[asset.folder] = labels[key].strip()
+    return titles
+
+
+def native_picture(pixels, origin, tiles):
+    image = Image.fromarray(np.dstack((PALETTE[pixels], (pixels != 0).astype(np.uint8) * 255)))
+    box = image.getbbox()
+    baseline = int(origin[1] + 8 * sum(tiles)) - box[1]
+    return image.crop(box), baseline
+
+
+def native_board(items):
+    """Keep one sprite pixel per screen pixel and align the projected tile centres."""
+    font = ImageFont.truetype('C:/Windows/Fonts/msyh.ttc', 15)
+    widths = [max(im.width, round(font.getlength(title))) + 20 for im, _, title in items]
+    baseline = 12 + max(anchor for _, anchor, _ in items)
+    bottom = baseline + max(im.height - anchor for im, anchor, _ in items)
+    board = Image.new('RGB', (sum(widths), bottom + 38), '#22313b')
     draw = ImageDraw.Draw(board)
-    font = ImageFont.truetype('C:/Windows/Fonts/msyh.ttc', 16)
-    draw.text((18, 15), '公共渲染管线 · 原生 1×', font=font, fill='#eff1ed')
-    for name, x, title in [('pearl', 20, '东方明珠'), ('tiananmen', 190, '天安门'), ('temple', 620, '天坛'), ('water-cube', 775, '水立方'), ('xian-bell-tower', 1055, '西安钟楼'), ('canton-tower', 1270, '广州塔'), ('xinghai-square', 1495, '星海广场'), ('yellow-crane-tower', 1835, '黄鹤楼'), ('gate-to-the-east', 2050, '东方之门')]:
-        im = Image.open(output / name / 'view0-1x-8bpp.png').convert('RGBA')
-        im = im.crop(im.getbbox())
-        board.paste(im, (x, 410 - im.height), im)
-        draw.text((x, 429), title, font=font, fill='#b5c7cd')
-    for i, kind in enumerate(('walkers', 'meeting', 'bench', 'tree')):
-        im = Image.open(output / 'plaza' / f'{kind}-v0.png').convert('RGBA')
-        im = im.crop(im.getbbox())
-        board.paste(im, (2300 + (i % 2) * 80, 312 + (i // 2) * 66), im)
-    draw.text((18, 463), '中国地标 · 九座地标与五种广场 · 原生精灵离线预览', font=font, fill='#b5c7cd')
+    draw.line((6, baseline, board.width - 6, baseline), fill='#40525c')
+    left = 0
+    for (im, anchor, title), width in zip(items, widths):
+        board.paste(im, (left + (width - im.width) // 2, baseline - anchor), im)
+        draw.text((left + width // 2, bottom + 8), title, font=font, fill='#edf1ed', anchor='mt')
+        left += width
+    return board
+
+
+def comparison_board(output):
+    items = []
+    titles = landmark_titles()
+    for asset in CURRENT:
+        with np.load(output / asset.name / 'render-view0.npz') as view:
+            picture = native_picture(view['composed'], view['origin'], view['tiles'])
+        items.append((*picture, titles[asset.folder]))
+    for kind, title in [('walkers', '散步人群'), ('meeting', '结伴人群'), ('bench', '长椅'), ('tree', '树池')]:
+        with Image.open(output / 'plaza' / f'{kind}-v0.png') as prop:
+            picture = native_picture(np.asarray(prop), export_plaza.ORIGIN, (1, 1))
+        items.append((*picture, title))
+    board = native_board(items)
     board.save(output / 'comparison-1x.png')
     board.resize((board.width * 2, board.height * 2), Image.Resampling.NEAREST).save(output / 'comparison-2x-nearest.png')
 

@@ -1,0 +1,33 @@
+switch (FEAT_OBJECTS, SELF, bns_world, view) {
+    0: bns_tiles_0;
+    1: bns_tiles_1;
+    2: bns_tiles_2;
+    bns_tiles_3;
+}
+switch (FEAT_OBJECTS, SELF, bns_purchase, view) {
+    0: bns_menu_layout_0;
+    1: bns_menu_layout_1;
+    2: bns_menu_layout_2;
+    bns_menu_layout_3;
+}
+item (FEAT_OBJECTS, beijing_national_stadium, 1114) {
+    property {
+        class: "SHLM";
+        name: string(STR_BEIJING_NATIONAL_STADIUM);
+        climates_available: ALL_CLIMATES;
+        size: [6,5];
+        build_cost_multiplier: 48;
+        remove_cost_multiplier: 24;
+        introduction_date: date(2008,6,28);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 5;
+        num_views: 4;
+    }
+    graphics {
+        default: bns_world;
+        purchase: bns_purchase;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}

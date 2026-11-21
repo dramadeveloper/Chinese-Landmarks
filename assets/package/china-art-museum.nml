@@ -1,0 +1,33 @@
+switch (FEAT_OBJECTS, SELF, cam_world, view) {
+    0: cam_tiles_0;
+    1: cam_tiles_1;
+    2: cam_tiles_2;
+    cam_tiles_3;
+}
+switch (FEAT_OBJECTS, SELF, cam_purchase, view) {
+    0: cam_menu_layout_0;
+    1: cam_menu_layout_1;
+    2: cam_menu_layout_2;
+    cam_menu_layout_3;
+}
+item (FEAT_OBJECTS, china_art_museum, 1111) {
+    property {
+        class: "SHLM";
+        name: string(STR_CHINA_ART_MUSEUM);
+        climates_available: ALL_CLIMATES;
+        size: [5,5];
+        build_cost_multiplier: 48;
+        remove_cost_multiplier: 24;
+        introduction_date: date(2012,10,1);
+        end_of_life_date: 0xFFFFFFFF;
+        object_flags: 0;
+        height: 10;
+        num_views: 4;
+    }
+    graphics {
+        default: cam_world;
+        purchase: cam_purchase;
+        tile_check: level_ground_only;
+        autoslope: return CB_RESULT_NO_AUTOSLOPE;
+    }
+}

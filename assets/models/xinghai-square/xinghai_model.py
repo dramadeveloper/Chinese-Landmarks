@@ -1,6 +1,12 @@
 """Xinghai Square before 2016: central star plaza and the Nine-Dragon Huabiao."""
+from pathlib import Path
+import sys
+
 import numpy as np
 from PIL import Image, ImageDraw
+if __name__ == '__main__':
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'chinese-landmarks'))
+
 from export_plaza import make_model
 
 SIZE, HEIGHT = 200, 88
@@ -193,3 +199,7 @@ def make_model_array():
         occupied = prop != 0
         target[occupied] = prop[occupied]+PROP_OFFSET
     return model
+
+
+if __name__ == '__main__':
+    np.savez_compressed(Path(__file__).with_name('model.npz'), model=make_model_array())

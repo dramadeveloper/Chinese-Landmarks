@@ -1,5 +1,11 @@
 """Xi'an Bell Tower: measured base/height, photo-estimated timber and roofs."""
+from pathlib import Path
+import sys
+
 import numpy as np
+if __name__ == '__main__':
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'chinese-landmarks'))
+
 from export_plaza import make_model
 
 ART_SCALE = 4.0
@@ -131,3 +137,7 @@ def make_building():
         target = a[px:px+3, py:py+2, 1:6]
         target[person != 0] = person[person != 0]+PROP_OFFSET
     return a
+
+
+if __name__ == '__main__':
+    np.savez_compressed(Path(__file__).with_name('model.npz'), model=make_building())
